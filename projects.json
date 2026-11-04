@@ -1,0 +1,101 @@
+[
+  {
+    "id": "restaurant",
+    "title": "Resto en Amoureux — Marie & Thomas",
+    "subtitle": "Créneaux libres M&T + Émile chez les grands-parents & Réservation auto",
+    "category": "famille-quotidien",
+    "emoji": "🍷",
+    "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/restaurant/",
+    "githubUrl": "https://github.com/Mrthomaslef/restaurant",
+    "pushedAt": "2026-11-04T21:44:57Z"
+  },
+  {
+    "id": "agenda-famille",
+    "title": "Agenda Famille — Marie & Thomas",
+    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
+    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
+    "pushedAt": "2026-11-04T13:06:03Z"
+  },
+  {
+    "id": "pocket-tcg-family",
+    "title": "milTCG — Pocket Family",
+    "subtitle": "Ouverture de boosters & collection de cartes personnalisées en famille",
+    "category": "emile-loisirs",
+    "emoji": "🃏",
+    "logoUrl": "https://mrthomaslef.github.io/pocket-tcg-family/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/pocket-tcg-family/",
+    "githubUrl": "https://github.com/Mrthomaslef/pocket-tcg-family",
+    "pushedAt": "2026-11-04T07:23:44Z"
+  },
+  {
+    "id": "quiz-pokemon",
+    "title": "PokéQuiz — Attrape-les tous !",
+    "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
+    "category": "emile-loisirs",
+    "emoji": "⚡",
+    "logoUrl": "https://mrthomaslef.github.io/quiz-pokemon/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/quiz-pokemon/",
+    "githubUrl": "https://github.com/Mrthomaslef/quiz-pokemon",
+    "pushedAt": "2026-11-04T07:23:41Z"
+  },
+  {
+    "id": "monopoly",
+    "title": "Jolly Roger's — Monopoly 3D",
+    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
+    "category": "emile-loisirs",
+    "emoji": "🏴‍☠️",
+    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
+    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
+    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
+    "pushedAt": "2026-11-04T07:23:36Z"
+  },
+  {
+    "id": "assistante-maternelle",
+    "title": "AssMat — Paie & Pajemploi",
+    "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
+    "category": "famille-quotidien",
+    "emoji": "👶",
+    "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
+    "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
+    "pushedAt": "2026-11-04T07:22:19Z"
+  },
+  {
+    "id": "quiz-trentenaires",
+    "title": "QUIZ du 7TER",
+    "subtitle": "Grand Quiz Show multijoueur (2 couples / 4 joueurs)",
+    "category": "emile-loisirs",
+    "emoji": "🎉",
+    "logoUrl": "https://mrthomaslef.github.io/quiz-trentenaires/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/quiz-trentenaires/",
+    "githubUrl": "https://github.com/Mrthomaslef/quiz-trentenaires",
+    "pushedAt": "2026-11-04T07:21:43Z"
+  },
+  {
+    "id": "biblio-marie",
+    "title": "BiblioMarie — Infectiologie pédiatrique",
+    "subtitle": "Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français",
+    "category": "pediatrie-clinique",
+    "emoji": "🧸",
+    "logoUrl": "https://mrthomaslef.github.io/biblio-marie/assets/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/biblio-marie/",
+    "githubUrl": "https://github.com/Mrthomaslef/biblio-marie",
+    "pushedAt": "2026-11-04T07:21:25Z"
+  },
+  {
+    "id": "dinociel-app-educative",
+    "title": "DinoCiel — Petit Dino",
+    "subtitle": "App éducative interactive pour Émile (3 ans) avec Petit Dino animé",
+    "category": "emile-loisirs",
+    "emoji": "🦕",
+    "logoUrl": "https://mrthomaslef.github.io/dinociel-app-educative/assets/dino-emotion-happy.jpg",
+    "prodUrl": "https://mrthomaslef.github.io/dinociel-app-educative/",
+    "githubUrl": "https://github.com/Mrthomaslef/dinociel-app-educative",
+    "pushedAt": "2026-11-01T11:51:25Z"
+  }
+]

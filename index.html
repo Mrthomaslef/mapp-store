@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Mapp Store 💖 • Le Store d'Apps de Marie</title>
+  <meta name="description" content="Bienvenue sur le Mapp Store ! Toutes les web-apps de Marie : Pédiatrie & Infectiologie, Agenda Famille, Resto en Amoureux, AssMat, Colis & Jeux en famille." />
+  <meta name="theme-color" content="#110922" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Mapp Store" />
+  <link rel="manifest" href="manifest.json?v=mapp1" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg?v=mapp1" />
+  <link rel="shortcut icon" href="favicon.ico?v=mapp1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=mapp1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #110922;
+      color: #F8FAFC;
+      min-height: 100dvh;
+      margin: 0;
+      overscroll-behavior-y: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    .font-fun {
+      font-family: 'Fredoka', 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: 0.01em;
+    }
+
+    /* Ambient Candy Aurora Background (Rose / Peach / Orchid) */
+    .cosmic-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(244, 63, 94, 0.24) 0%, transparent 42%),
+        radial-gradient(circle at 88% 16%, rgba(236, 72, 153, 0.22) 0%, transparent 44%),
+        radial-gradient(circle at 50% 60%, rgba(168, 85, 247, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 85% 88%, rgba(251, 191, 36, 0.13) 0%, transparent 40%),
+        linear-gradient(180deg, #110922 0%, #170C2E 50%, #0C071A 100%);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Fun Tactile Store Cards */
+    .app-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.025) 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .app-card:active {
+      transform: scale(0.97);
+    }
+
+    @media (hover: hover) {
+      .app-card:hover {
+        transform: translateY(-2px) scale(1.01);
+        border-color: rgba(244, 114, 182, 0.45);
+        box-shadow: 0 12px 28px -6px rgba(244, 63, 94, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    /* Favorites Dock Card */
+    .fav-dock-box {
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.10) 0%, rgba(244, 63, 94, 0.12) 50%, rgba(217, 70, 239, 0.08) 100%);
+      border: 1.5px solid rgba(250, 204, 21, 0.28);
+      box-shadow: 0 10px 30px -8px rgba(244, 63, 94, 0.20), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    /* Bouncy App Icon Squircle */
+    .app-squircle {
+      border-radius: 28%;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.28);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .app-card:hover .app-squircle,
+    .grid-tile:hover .app-squircle,
+    .fav-tile:hover .app-squircle {
+      transform: rotate(-4deg) scale(1.07);
+    }
+
+    /* Star Button Bounce */
+    .star-btn {
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.15s ease, background-color 0.15s ease;
+    }
+    .star-btn:active {
+      transform: scale(1.35) rotate(18deg);
+    }
+
+    /* Logo Halo Ring */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-3px) rotate(2deg); }
+    }
+    .logo-bounce {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+
+    /* Roulette Highlight Animation */
+    @keyframes partyPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.7), 0 0 30px rgba(244, 63, 94, 0.7); border-color: #FDE047; }
+      50% { box-shadow: 0 0 0 8px rgba(250, 204, 21, 0), 0 0 40px rgba(236, 72, 153, 0.9); border-color: #F472B6; }
+    }
+    .roulette-winner {
+      animation: partyPulse 1s ease-in-out 3;
+      border-color: #FDE047 !important;
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.25), rgba(217, 70, 239, 0.20)) !important;
+    }
+
+    /* Pull-to-Refresh Indicator */
+    #ptr-container {
+      height: 0px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: height 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+      opacity: 0;
+      user-select: none;
+    }
+    #ptr-container.dragging {
+      transition: none;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pink-500/30">
+  <div class="cosmic-bg"></div>
+
+  <!-- PULL-TO-REFRESH INDICATOR -->
+  <div id="ptr-container" style="margin-top: var(--safe-top);">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/20 border border-pink-400/30 text-xs font-bold text-pink-200 shadow-lg backdrop-blur-md">
+      <svg id="ptr-spinner" class="w-4 h-4 text-yellow-300 transition-transform duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+      <span id="ptr-label">Tirer pour rafraîchir le Mapp Store ✨</span>
+    </div>
+  </div>
+
+  <div id="app-content" class="max-w-lg md:max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto min-h-dvh flex flex-col px-4 sm:px-6 lg:px-10" style="padding-top: max(0.75rem, var(--safe-top)); padding-bottom: max(2.5rem, var(--safe-bottom));">
+
+    <!-- HEADER FUN : LE MAPP STORE DE MARIE -->
+    <header class="pt-2 md:pt-5 pb-4 md:pb-5">
+      <div class="flex items-center justify-between gap-2 md:gap-4">
+        <div class="flex items-center gap-3.5 md:gap-4 min-w-0">
+          <div class="relative shrink-0 logo-bounce">
+            <div class="absolute -inset-1 rounded-[20px] bg-gradient-to-tr from-rose-500 via-pink-500 to-amber-300 opacity-75 blur-sm"></div>
+            <img
+              src="assets/logo.jpg?v=mapp1"
+              onerror="this.src='assets/icon.svg?v=mapp1'"
+              alt="Logo Mapp Store"
+              class="relative w-14 h-14 md:w-16 md:h-16 rounded-[18px] md:rounded-[20px] object-cover shadow-xl border-2 border-white/30"
+            />
+            <span id="live-dot" class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 md:w-4 md:h-4 rounded-full bg-emerald-400 ring-2 ring-[#110922]" title="Applications synchronisées en direct"></span>
+          </div>
+
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 md:gap-2.5 flex-wrap">
+              <h1 class="font-fun text-2xl md:text-3xl font-bold tracking-tight bg-gradient-to-r from-yellow-200 via-pink-300 to-rose-300 bg-clip-text text-transparent drop-shadow-sm">
+                Mapp Store
+              </h1>
+              <span class="px-2 md:px-2.5 py-0.5 rounded-full text-[10px] md:text-[11px] font-extrabold uppercase tracking-wider bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-pink-200 border border-pink-400/30">
+                Marie • Pédiatrie &amp; Famille
+              </span>
+            </div>
+            <p id="sync-subtitle" class="text-xs md:text-sm text-pink-200/75 truncate mt-0.5">Toutes les apps de Marie, Émile &amp; la maison 💖</p>
+          </div>
+        </div>
+
+        <!-- Boutons Action Header : Surprise + Grille/Liste + Refresh -->
+        <div class="flex items-center gap-1.5 md:gap-2 shrink-0">
+          <button
+            onclick="pickRandomApp()"
+            title="Lancer une app au hasard !"
+            class="px-2.5 md:px-3.5 py-2 md:py-2.5 rounded-2xl bg-gradient-to-br from-amber-400/20 to-pink-500/20 hover:from-amber-400/30 hover:to-pink-500/30 border border-amber-300/30 text-amber-200 text-xs font-extrabold transition active:scale-90 flex items-center gap-1.5 shadow-md"
+          >
+            <span class="text-sm">🎲</span>
+            <span class="hidden sm:inline">Surprise</span>
+          </button>
+
+          <button
+            id="view-toggle-btn"
+            onclick="toggleViewMode()"
+            title="Changer l'affichage (Cartes / Grille Launchpad)"
+            class="p-2.5 md:px-3.5 md:py-2.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 text-pink-200 transition active:scale-90 flex items-center gap-1.5"
+          >
+            <svg id="view-toggle-icon" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+            </svg>
+            <span id="view-toggle-label" class="hidden md:inline text-xs font-extrabold">Grille</span>
+          </button>
+
+          <button
+            onclick="syncFromGitHub(true)"
+            title="Actualiser depuis GitHub"
+            class="p-2.5 md:px-3.5 md:py-2.5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 text-rose-200 transition active:scale-90 flex items-center gap-1.5"
+          >
+            <svg id="refresh-icon" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <span class="hidden lg:inline text-xs font-extrabold">Actualiser</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- BANDEAU RACCOURCIS EXPRESS DE MARIE -->
+      <div class="mt-4 md:mt-5 rounded-3xl p-3.5 md:p-4 bg-gradient-to-r from-rose-950/80 via-fuchsia-950/70 to-indigo-950/75 border border-pink-400/25 shadow-lg shadow-rose-950/40 space-y-2.5 lg:space-y-0 lg:flex lg:items-center lg:justify-between lg:gap-5">
+        <div class="flex items-center justify-between lg:flex-col lg:items-start lg:justify-center gap-2 lg:gap-1 px-0.5 lg:min-w-[235px]">
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-rose-400 shrink-0 shadow-[0_0_8px_#fb7185]"></span>
+            <span class="text-xs md:text-sm font-bold text-pink-100 truncate">
+              ✨ Accès Express • <strong class="font-extrabold text-yellow-200">L'essentiel de Marie</strong>
+            </span>
+          </div>
+          <span class="text-[11px] font-semibold text-pink-200/75 hidden sm:inline">En 1 clic depuis ton iPhone ou ton Mac</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-2.5 lg:flex-1">
+          <a
+            href="https://mrthomaslef.github.io/biblio-marie/"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl p-2.5 bg-slate-950/50 hover:bg-slate-950/75 border border-cyan-400/30 flex items-center gap-2.5 transition active:scale-95 group"
+          >
+            <span class="w-9 h-9 rounded-xl bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition">🧸</span>
+            <div class="min-w-0">
+              <div class="text-xs font-extrabold text-cyan-200 truncate">BiblioMarie</div>
+              <div class="text-[10px] text-purple-200/70 truncate">Veille Pédiatrie</div>
+            </div>
+          </a>
+
+          <a
+            href="https://mrthomaslef.github.io/agenda-famille/"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl p-2.5 bg-slate-950/50 hover:bg-slate-950/75 border border-pink-400/30 flex items-center gap-2.5 transition active:scale-95 group"
+          >
+            <span class="w-9 h-9 rounded-xl bg-pink-500/20 border border-pink-400/30 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition">🏡</span>
+            <div class="min-w-0">
+              <div class="text-xs font-extrabold text-pink-200 truncate">Agenda Famille</div>
+              <div class="text-[10px] text-purple-200/70 truncate">Gardes &amp; Émile</div>
+            </div>
+          </a>
+
+          <a
+            href="https://mrthomaslef.github.io/restaurant/"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl p-2.5 bg-slate-950/50 hover:bg-slate-950/75 border border-amber-400/30 flex items-center gap-2.5 transition active:scale-95 group"
+          >
+            <span class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition">🍷</span>
+            <div class="min-w-0">
+              <div class="text-xs font-extrabold text-amber-200 truncate">Resto Amoureux</div>
+              <div class="text-[10px] text-purple-200/70 truncate">Soirées M&amp;T</div>
+            </div>
+          </a>
+
+          <a
+            href="https://mrthomaslef.github.io/assistante-maternelle/"
+            target="_blank"
+            rel="noopener"
+            class="rounded-2xl p-2.5 bg-slate-950/50 hover:bg-slate-950/75 border border-violet-400/30 flex items-center gap-2.5 transition active:scale-95 group"
+          >
+            <span class="w-9 h-9 rounded-xl bg-violet-500/20 border border-violet-400/30 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition">👶</span>
+            <div class="min-w-0">
+              <div class="text-xs font-extrabold text-violet-200 truncate">AssMat Mabrouka</div>
+              <div class="text-[10px] text-purple-200/70 truncate">Paie &amp; Congés</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- BARRE DE RECHERCHE + ONGLETS CATÉGORIES -->
+      <div class="mt-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <!-- BARRE DE RECHERCHE LUDIQUE -->
+        <div class="relative lg:w-80 xl:w-96 shrink-0 lg:order-2">
+          <svg class="w-4 h-4 text-pink-300/80 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Chercher une app de Marie, un jeu..."
+            oninput="handleSearch(this.value)"
+            class="w-full pl-11 pr-14 py-2.5 rounded-2xl bg-white/[0.08] border border-white/15 text-sm font-medium text-white placeholder-purple-200/50 focus:outline-none focus:border-pink-400 focus:bg-white/[0.12] transition shadow-inner"
+          />
+          <button
+            id="search-clear-btn"
+            onclick="clearSearchInput()"
+            title="Effacer la recherche (Échap)"
+            class="hidden absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/10 hover:bg-white/20 text-purple-200 text-xs font-bold items-center justify-center transition"
+          >✕</button>
+          <kbd
+            id="search-kbd-hint"
+            class="hidden md:inline-flex items-center gap-0.5 px-2 py-0.5 rounded-lg bg-white/[0.07] border border-white/15 text-[10px] font-bold text-purple-200/60 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+          >⌘K</kbd>
+        </div>
+
+        <!-- ONGLETS CATÉGORIES COLORÉS (AVEC ONGLET FAVORIS ⭐) -->
+        <div id="category-tabs" class="flex items-center gap-2 overflow-x-auto md:flex-wrap no-scrollbar pt-0.5 lg:order-1 flex-1"></div>
+      </div>
+    </header>
+
+    <!-- DOCK "⭐ MES FAVORIS" ÉPINGLÉS EN HAUT -->
+    <section id="favorites-dock-section" class="mb-5 md:mb-7 hidden">
+      <div class="fav-dock-box rounded-3xl p-3.5 md:p-4 space-y-3">
+        <div class="flex items-center justify-between px-1 gap-2">
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="text-base md:text-lg">⭐</span>
+            <h2 class="font-fun text-sm md:text-base font-bold tracking-wide bg-gradient-to-r from-yellow-200 via-amber-300 to-pink-300 bg-clip-text text-transparent truncate">
+              Les Favoris de Marie
+            </h2>
+            <span id="fav-count-badge" class="px-2 py-0.5 rounded-full bg-yellow-400/20 border border-yellow-300/30 text-[10px] md:text-xs font-extrabold text-yellow-200">0</span>
+            <span id="fav-save-status" class="hidden px-2 py-0.5 rounded-full bg-emerald-400/20 border border-emerald-300/40 text-[10px] font-bold text-emerald-200 transition-opacity duration-300">
+              ✓ Enregistré
+            </span>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button
+              id="fav-edit-btn"
+              onclick="toggleEditFavorites()"
+              class="px-2.5 md:px-3 py-1 rounded-full bg-white/[0.07] hover:bg-white/[0.14] border border-white/15 text-[11px] md:text-xs font-bold text-purple-200 hover:text-white transition active:scale-95"
+              title="Organiser ou retirer des favoris"
+            >
+              ✏️ Organiser
+            </button>
+          </div>
+        </div>
+
+        <div id="favorites-strip" class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2.5 md:gap-3.5"></div>
+      </div>
+    </section>
+
+    <!-- CONTENEUR DES APPS DU MAPP STORE -->
+    <main id="projects-container" class="flex-1 space-y-6 md:space-y-8 pt-1"></main>
+
+    <!-- FOOTER MINI FUN -->
+    <footer class="mt-10 md:mt-14 pt-4 md:pt-5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs text-purple-200/50">
+      <div class="flex items-center gap-3">
+        <span class="font-fun">💖 Mapp Store • Pour Marie, avec ❤️</span>
+        <span class="hidden md:inline text-purple-300/40">• Raccourcis : <kbd class="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px]">⌘K</kbd> rechercher, <kbd class="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px]">1-5</kbd> catégories</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://mrthomaslef.github.io/allinone/" target="_blank" rel="noopener" class="hover:text-pink-300 transition inline-flex items-center gap-1 font-semibold">
+          <span>🛍️ Tapp Store complet</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODALE D'APERÇU EN DIRECT (ORDINATEUR / TABLETTE) -->
+  <div id="desktop-preview-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-5 lg:p-8 bg-slate-950/80 backdrop-blur-md" onclick="handlePreviewBackdropClick(event)">
+    <div class="w-full max-w-6xl h-[88dvh] rounded-3xl bg-[#120C24] border border-white/20 shadow-2xl flex flex-col overflow-hidden" onclick="event.stopPropagation()">
+      <!-- Barre de fenêtre style macOS -->
+      <div class="px-4 py-3 bg-[#1A1233] border-b border-white/10 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button onclick="closeAppPreview()" title="Fermer (Échap)" class="w-3.5 h-3.5 rounded-full bg-rose-500 hover:bg-rose-400 transition"></button>
+            <button onclick="setPreviewViewport('mobile')" title="Format Mobile" class="w-3.5 h-3.5 rounded-full bg-amber-400 hover:bg-amber-300 transition"></button>
+            <button onclick="setPreviewViewport('desktop')" title="Format Bureau plein écran" class="w-3.5 h-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 transition"></button>
+          </div>
+          <div class="min-w-0 flex items-center gap-2">
+            <span id="preview-modal-title" class="font-fun text-sm md:text-base font-bold text-white truncate">Aperçu</span>
+            <span id="preview-modal-url" class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-purple-200/70 truncate max-w-xs md:max-w-md"></span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <div class="hidden sm:flex items-center bg-white/5 p-0.5 rounded-xl border border-white/10">
+            <button id="preview-vp-desktop" onclick="setPreviewViewport('desktop')" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-500 text-white transition">🖥️ Bureau</button>
+            <button id="preview-vp-mobile" onclick="setPreviewViewport('mobile')" class="px-2.5 py-1 rounded-lg text-xs font-bold text-purple-200/70 hover:text-white transition">📱 Mobile</button>
+          </div>
+          <a id="preview-modal-open-btn" href="#" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-pink-500 to-amber-400 text-slate-950 font-fun font-bold text-xs inline-flex items-center gap-1 shadow hover:opacity-95 transition">
+            <span>Plein écran</span>
+            <span>↗</span>
+          </a>
+          <button onclick="closeAppPreview()" class="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-purple-200 hover:text-white text-xs font-bold transition" title="Fermer (Échap)">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Zone Iframe -->
+      <div class="flex-1 bg-[#090614] flex items-center justify-center p-0 overflow-hidden relative">
+        <iframe
+          id="preview-modal-iframe"
+          src="about:blank"
+          class="w-full h-full border-0 bg-slate-950 transition-all duration-300"
+          allow="clipboard-write; fullscreen; autoplay; gamepad"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const GITHUB_USERNAME = 'Mrthomaslef';
+    const CACHE_KEY = 'mapp_store_live_repos_cache_v2';
+    const VIEW_MODE_KEY = 'mapp_store_view_mode_v1';
+    const FAVS_V2_KEY = 'mapp_store_favorites_v3';
+    const FAVS_STORAGE_KEY = 'mapp_store_favorites_v2';
+    const FAVS_COOKIE_NAME = 'mapp_favs_v3';
+    let lastManualSyncBust = '';
+    let isEditingFavorites = false;
+    let favSaveStatusTimer = null;
+
+    // Applications exclues du Mapp Store
+    const EXCLUDED_REPOS = new Set([
+      'allinone',
+      'mapp-store',
+      'gemini-ultra',
+      'news-ai',
+      'biblioosteo',
+      'agenda-cochin',
+      'agenda-internes',
+      'guide-interne-cochin-os',
+      'guide-infiltration',
+      'archive-des-internes',
+      'quiz-imagerie',
+      'radio-thomas',
+      'dicomviewer',
+      'tpack-cases',
+      'm4-gaming',
+      'medicalc',
+      'tomatocalc',
+      'colistrack',
+      'forestia-mobile',
+      'holidamn'
+    ]);
+
+    function isThomasOnlyRepo(repoOrName, description = '', topics = []) {
+      const name = typeof repoOrName === 'string' ? repoOrName : (repoOrName?.name || repoOrName?.id || '');
+      const key = String(name).trim().toLowerCase();
+      if (!key || EXCLUDED_REPOS.has(key)) return true;
+      const tList = Array.isArray(topics) ? topics.map(t => String(t).toLowerCase()) : [];
+      const text = `${key} ${description || ''} ${tList.join(' ')}`.toLowerCase();
+      if (/(cochin|osteo|ostéo|dicom|pacs|tpack|interne|irm|scanner|infiltration|tomatocalc|medicalc|colistrack|forestia|holidamn)/.test(text)) {
+        return true;
+      }
+      return false;
+    }
+
+    // Favoris épinglés par défaut pour Marie
+    const DEFAULT_FAVORITES = [
+      'biblio-marie',
+      'agenda-famille',
+      'restaurant',
+      'assistante-maternelle',
+      'dinociel-app-educative'
+    ];
+
+    function normalizeFavArray(arr) {
+      if (!Array.isArray(arr)) return [];
+      const seen = new Set();
+      const out = [];
+      arr.forEach(item => {
+        const k = String(item || '').trim().toLowerCase();
+        if (k && !seen.has(k) && !EXCLUDED_REPOS.has(k)) {
+          seen.add(k);
+          out.push(k);
+        }
+      });
+      return out;
+    }
+
+    function readCookieFavorites() {
+      try {
+        const match = document.cookie.split('; ').find(row => row.startsWith(FAVS_COOKIE_NAME + '='));
+        if (!match) return null;
+        const val = decodeURIComponent(match.split('=').slice(1).join('='));
+        const parsed = JSON.parse(val);
+        if (parsed && Array.isArray(parsed.ids)) {
+          return { ids: normalizeFavArray(parsed.ids), updatedAt: Number(parsed.updatedAt) || 1 };
+        }
+      } catch (_) {}
+      return null;
+    }
+
+    function writeCookieFavorites(state) {
+      try {
+        const val = encodeURIComponent(JSON.stringify(state));
+        document.cookie = `${FAVS_COOKIE_NAME}=${val}; path=/; max-age=315360000; SameSite=Lax`;
+      } catch (_) {}
+    }
+
+    function openFavDB() {
+      return new Promise((resolve) => {
+        if (!window.indexedDB) return resolve(null);
+        try {
+          const req = indexedDB.open('MappStoreDB', 1);
+          req.onupgradeneeded = (e) => {
+            const db = e.target.result;
+            if (!db.objectStoreNames.contains('kv')) {
+              db.createObjectStore('kv');
+            }
+          };
+          req.onsuccess = (e) => resolve(e.target.result);
+          req.onerror = () => resolve(null);
+        } catch (_) {
+          resolve(null);
+        }
+      });
+    }
+
+    async function readIDBFavorites() {
+      const db = await openFavDB();
+      if (!db) return null;
+      return new Promise((resolve) => {
+        try {
+          const tx = db.transaction('kv', 'readonly');
+          const req = tx.objectStore('kv').get('favorites_v3');
+          req.onsuccess = () => {
+            const res = req.result;
+            if (res && Array.isArray(res.ids)) {
+              resolve({ ids: normalizeFavArray(res.ids), updatedAt: Number(res.updatedAt) || 1 });
+            } else {
+              resolve(null);
+            }
+          };
+          req.onerror = () => resolve(null);
+        } catch (_) {
+          resolve(null);
+        }
+      });
+    }
+
+    async function writeIDBFavorites(state) {
+      const db = await openFavDB();
+      if (!db) return;
+      try {
+        const tx = db.transaction('kv', 'readwrite');
+        tx.objectStore('kv').put(state, 'favorites_v3');
+      } catch (_) {}
+    }
+
+    function loadInitialFavoritesState() {
+      let best = { ids: [...DEFAULT_FAVORITES], updatedAt: 0 };
+
+      try {
+        const rawV2 = localStorage.getItem(FAVS_V2_KEY);
+        if (rawV2) {
+          const parsed = JSON.parse(rawV2);
+          if (parsed && Array.isArray(parsed.ids)) {
+            best = {
+              ids: normalizeFavArray(parsed.ids),
+              updatedAt: Number(parsed.updatedAt) || 1
+            };
+          }
+        } else {
+          const legacyRaw = localStorage.getItem(FAVS_STORAGE_KEY);
+          if (legacyRaw) {
+            const parsedLegacy = JSON.parse(legacyRaw);
+            if (Array.isArray(parsedLegacy)) {
+              best = { ids: normalizeFavArray(parsedLegacy), updatedAt: 1 };
+            }
+          }
+        }
+      } catch (_) {}
+
+      const cookieState = readCookieFavorites();
+      if (cookieState && cookieState.updatedAt > best.updatedAt) {
+        best = cookieState;
+      }
+
+      return best;
+    }
+
+    let favState = loadInitialFavoritesState();
+    let favoriteList = favState.ids;
+    let favoritesUpdatedAt = favState.updatedAt;
+
+    function showFavSavedFeedback(label = '✓ Enregistré') {
+      const badge = document.getElementById('fav-save-status');
+      if (!badge) return;
+      badge.textContent = label;
+      badge.classList.remove('hidden');
+      if (favSaveStatusTimer) clearTimeout(favSaveStatusTimer);
+      favSaveStatusTimer = setTimeout(() => {
+        badge.classList.add('hidden');
+      }, 2200);
+    }
+
+    function persistFavoritesLocally() {
+      const payload = { ids: favoriteList, updatedAt: favoritesUpdatedAt };
+      try {
+        localStorage.setItem(FAVS_V2_KEY, JSON.stringify(payload));
+        localStorage.setItem(FAVS_STORAGE_KEY, JSON.stringify(favoriteList));
+      } catch (_) {}
+      writeCookieFavorites(payload);
+      writeIDBFavorites(payload);
+    }
+
+    function applyRemoteFavoritesIfNewer(remoteFavs) {
+      if (!remoteFavs || !Array.isArray(remoteFavs.ids)) return false;
+      const remoteTs = Number(remoteFavs.updatedAt) || 0;
+      if (remoteTs > favoritesUpdatedAt) {
+        favoriteList = normalizeFavArray(remoteFavs.ids);
+        favoritesUpdatedAt = remoteTs;
+        persistFavoritesLocally();
+        renderTabs();
+        renderFavoritesDock();
+        renderProjects();
+        return true;
+      }
+      return false;
+    }
+
+    async function syncFavoritesEverywhere() {
+      const idbState = await readIDBFavorites();
+      if (idbState && Array.isArray(idbState.ids) && (Number(idbState.updatedAt) || 0) > favoritesUpdatedAt) {
+        favoriteList = normalizeFavArray(idbState.ids);
+        favoritesUpdatedAt = Number(idbState.updatedAt) || 1;
+        persistFavoritesLocally();
+        renderTabs();
+        renderFavoritesDock();
+        renderProjects();
+      } else if (favoritesUpdatedAt > 0) {
+        persistFavoritesLocally();
+      }
+
+      const candidates = [
+        `./favorites.json?t=${Date.now()}`,
+        `https://raw.githubusercontent.com/${GITHUB_USERNAME}/mapp-store/main/favorites.json?t=${Date.now()}`
+      ];
+
+      for (const url of candidates) {
+        try {
+          const ctrl = new AbortController();
+          const tid = setTimeout(() => ctrl.abort(), 2000);
+          const res = await fetch(url, { cache: 'no-store', signal: ctrl.signal });
+          clearTimeout(tid);
+          if (res.ok) {
+            const data = await res.json();
+            if (data && Array.isArray(data.ids)) {
+              applyRemoteFavoritesIfNewer(data);
+            }
+          }
+        } catch (_) {}
+      }
+    }
+
+    function isFavorite(projectId) {
+      const key = String(projectId || '').toLowerCase();
+      return favoriteList.includes(key);
+    }
+
+    function toggleFavorite(event, projectId) {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+      const key = String(projectId || '').toLowerCase();
+      if (!key) return;
+      const idx = favoriteList.indexOf(key);
+      if (idx !== -1) {
+        favoriteList.splice(idx, 1);
+      } else {
+        favoriteList.push(key);
+      }
+      favoritesUpdatedAt = Date.now();
+      persistFavoritesLocally();
+      showFavSavedFeedback('✓ Favoris enregistrés');
+      if (navigator.vibrate) navigator.vibrate(10);
+      renderTabs();
+      renderFavoritesDock();
+      renderProjects();
+    }
+
+    function moveFavorite(event, projectId, direction) {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+      const key = String(projectId || '').toLowerCase();
+      const idx = favoriteList.indexOf(key);
+      if (idx === -1) return;
+      const targetIdx = idx + direction;
+      if (targetIdx < 0 || targetIdx >= favoriteList.length) return;
+      const temp = favoriteList[idx];
+      favoriteList[idx] = favoriteList[targetIdx];
+      favoriteList[targetIdx] = temp;
+      favoritesUpdatedAt = Date.now();
+      persistFavoritesLocally();
+      showFavSavedFeedback('✓ Ordre sauvegardé');
+      if (navigator.vibrate) navigator.vibrate(8);
+      renderFavoritesDock();
+      renderProjects();
+    }
+
+    function toggleEditFavorites() {
+      isEditingFavorites = !isEditingFavorites;
+      const btn = document.getElementById('fav-edit-btn');
+      if (btn) {
+        if (isEditingFavorites) {
+          btn.textContent = '✓ Terminé';
+          btn.className = 'px-2.5 py-1 rounded-full bg-yellow-400 text-slate-950 text-[11px] font-extrabold shadow transition active:scale-95';
+        } else {
+          btn.textContent = '✏️ Organiser';
+          btn.className = 'px-2.5 py-1 rounded-full bg-white/[0.07] hover:bg-white/[0.14] border border-white/15 text-[11px] font-bold text-purple-200 hover:text-white transition active:scale-95';
+        }
+      }
+      renderFavoritesDock();
+    }
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === FAVS_V2_KEY && e.newValue) {
+        try {
+          const parsed = JSON.parse(e.newValue);
+          applyRemoteFavoritesIfNewer(parsed);
+        } catch (_) {}
+      }
+    });
+
+    const CATEGORIES = [
+      {
+        id: 'pediatrie-clinique',
+        name: 'Pédiatrie & Infectio',
+        emoji: '🧸',
+        pillActive: 'bg-gradient-to-r from-cyan-400 to-teal-400 text-slate-950 shadow-lg shadow-cyan-500/25',
+        badgeClass: 'from-cyan-400 to-teal-400 text-slate-950 shadow-cyan-500/25',
+        ctaLabel: 'OUVRIR'
+      },
+      {
+        id: 'famille-quotidien',
+        name: 'Famille & Quotidien',
+        emoji: '🏡',
+        pillActive: 'bg-gradient-to-r from-rose-500 to-pink-400 text-white shadow-lg shadow-rose-500/25',
+        badgeClass: 'from-rose-500 to-pink-500 text-white shadow-rose-500/25',
+        ctaLabel: 'TAP !'
+      },
+      {
+        id: 'emile-loisirs',
+        name: 'Émile & Jeux',
+        emoji: '🦕',
+        pillActive: 'bg-gradient-to-r from-amber-400 to-pink-500 text-slate-950 shadow-lg shadow-amber-500/25',
+        badgeClass: 'from-amber-400 to-pink-500 text-slate-950 shadow-amber-500/25',
+        ctaLabel: 'JOUER'
+      }
+    ];
+
+    const KNOWN_METADATA = {
+      'biblio-marie': {
+        title: 'BiblioMarie — Infectiologie pédiatrique',
+        subtitle: 'Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français',
+        category: 'pediatrie-clinique',
+        emoji: '🧸',
+        logoUrl: 'https://mrthomaslef.github.io/biblio-marie/assets/apple-touch-icon.png',
+        extraFallbacks: [
+          'https://mrthomaslef.github.io/biblio-marie/assets/icon-192.png',
+          'https://mrthomaslef.github.io/biblio-marie/assets/icon.svg'
+        ],
+        alwaysInclude: true
+      },
+      'agenda-famille': {
+        title: 'Agenda Famille — Marie & Thomas',
+        subtitle: 'Planning partagé, gardes, relais Émile & indisponibilités à la maison',
+        category: 'famille-quotidien',
+        emoji: '🏡',
+        logoUrl: 'https://mrthomaslef.github.io/agenda-famille/icon.svg',
+        alwaysInclude: true
+      },
+      'restaurant': {
+        title: 'Resto en Amoureux — Marie & Thomas',
+        subtitle: 'Créneaux libres M&T + Émile chez les grands-parents & Réservation auto',
+        category: 'famille-quotidien',
+        emoji: '🍷',
+        logoUrl: 'https://mrthomaslef.github.io/restaurant/assets/icon.svg',
+        alwaysInclude: true
+      },
+      'assistante-maternelle': {
+        title: 'AssMat — Paie & Pajemploi',
+        subtitle: "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
+        category: 'famille-quotidien',
+        emoji: '👶',
+        logoUrl: 'https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png',
+        extraFallbacks: [
+          'https://mrthomaslef.github.io/assistante-maternelle/icon.svg'
+        ],
+        alwaysInclude: true
+      },
+      'dinociel-app-educative': {
+        title: 'DinoCiel — Petit Dino',
+        subtitle: 'App éducative interactive pour Émile (3 ans) avec Petit Dino animé',
+        category: 'emile-loisirs',
+        emoji: '🦕',
+        logoUrl: 'https://mrthomaslef.github.io/dinociel-app-educative/assets/dino-emotion-happy.jpg',
+        extraFallbacks: [
+          'assets/dinociel-icon.jpg',
+          'https://mrthomaslef.github.io/dinociel-app-educative/assets/dino-idle.jpg',
+          'https://mrthomaslef.github.io/dinociel-app-educative/assets/dino-celebrate.jpg'
+        ]
+      },
+      'pocket-tcg-family': {
+        title: 'milTCG — Pocket Family',
+        subtitle: 'Ouverture de boosters & collection de cartes personnalisées en famille',
+        category: 'emile-loisirs',
+        emoji: '🃏',
+        logoUrl: 'https://mrthomaslef.github.io/pocket-tcg-family/apple-touch-icon.png',
+        extraFallbacks: ['https://mrthomaslef.github.io/pocket-tcg-family/favicon.svg']
+      },
+      'quiz-trentenaires': {
+        title: 'QUIZ du 7TER',
+        subtitle: 'Grand Quiz Show multijoueur (2 couples / 4 joueurs)',
+        category: 'emile-loisirs',
+        emoji: '🎉',
+        logoUrl: 'https://mrthomaslef.github.io/quiz-trentenaires/apple-touch-icon.png',
+        extraFallbacks: ['https://mrthomaslef.github.io/quiz-trentenaires/logo-7ter.svg']
+      },
+      'monopoly': {
+        title: "Jolly Roger's — Monopoly 3D",
+        subtitle: 'Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)',
+        category: 'emile-loisirs',
+        emoji: '🏴‍☠️',
+        logoUrl: 'https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png',
+        extraFallbacks: [
+          'assets/pirate-plunder-icon.png?v=2',
+          'https://mrthomaslef.github.io/monopoly/assets/icon.svg',
+          'https://mrthomaslef.github.io/monopoly/assets/compass_emblem.jpg'
+        ]
+      },
+      'quiz-pokemon': {
+        title: 'PokéQuiz — Attrape-les tous !',
+        subtitle: 'Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)',
+        category: 'emile-loisirs',
+        emoji: '⚡',
+        logoUrl: 'https://mrthomaslef.github.io/quiz-pokemon/apple-touch-icon.png',
+        extraFallbacks: [
+          'https://mrthomaslef.github.io/quiz-pokemon/icon-192.png',
+          'https://mrthomaslef.github.io/quiz-pokemon/logo.png',
+          'https://mrthomaslef.github.io/quiz-pokemon/icon.svg'
+        ]
+      }
+    };
+
+    function classifyNewRepo(repo) {
+      const topics = (repo.topics || []).map(t => t.toLowerCase());
+      const text = `${repo.name} ${repo.description || ''} ${topics.join(' ')}`.toLowerCase();
+
+      if (/(marie|pediatr|pédiatr|infectio)/.test(text)) {
+        return { category: 'pediatrie-clinique', emoji: '🧸' };
+      }
+      if (/(quiz|tcg|game|jeu|carte|soirée|soiree|blindtest|poker|monopoly|pirate|plunder|pokemon|poké|dino|enfant|emile|émile|plateau|board|arcade)/.test(text)) {
+        return { category: 'emile-loisirs', emoji: '🦕' };
+      }
+      return { category: 'famille-quotidien', emoji: '🏡' };
+    }
+
+    function formatRepoTitle(name) {
+      return name
+        .replace(/[-_]+/g, ' ')
+        .replace(/\b\w/g, l => l.toUpperCase());
+    }
+
+    function withLogoVersion(url, p) {
+      if (!url) return '';
+      const ver = lastManualSyncBust || 'mapp1_' + (p && p.pushedAt ? (Date.parse(p.pushedAt) || p.pushedAt) : '1');
+      if (!ver) return url;
+      const clean = url.split('?')[0];
+      return `${clean}?v=${encodeURIComponent(ver)}`;
+    }
+
+    function handleLogoError(imgEl) {
+      const fallbacks = (imgEl.dataset.fallbacks || '').split('|').filter(Boolean);
+      const step = parseInt(imgEl.dataset.step || '0', 10);
+      if (step < fallbacks.length) {
+        imgEl.dataset.step = String(step + 1);
+        imgEl.src = fallbacks[step];
+      } else {
+        const emoji = imgEl.dataset.emoji || '💖';
+        const parent = imgEl.parentElement;
+        if (parent) {
+          parent.innerHTML = `<span class="text-2xl select-none">${emoji}</span>`;
+        }
+      }
+    }
+
+    async function discoverLiveAppMeta(prodUrl) {
+      if (!prodUrl || !prodUrl.startsWith('http')) return null;
+      const ctrl = new AbortController();
+      const tid = setTimeout(() => ctrl.abort(), 3200);
+      try {
+        const target = `${prodUrl}${prodUrl.includes('?') ? '&' : '?'}t=${Date.now()}`;
+        const res = await fetch(target, { cache: 'no-store', signal: ctrl.signal });
+        if (!res.ok) return null;
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const liveTitle = (doc.querySelector('title')?.textContent || '').replace(/\s+/g, ' ').trim() || null;
+
+        const appleIcons = [];
+        const pngIcons = [];
+        const svgIcons = [];
+        const brandImgs = [];
+        const icoIcons = [];
+        let manifestHref = null;
+
+        doc.querySelectorAll('link[rel]').forEach(link => {
+          const rel = (link.getAttribute('rel') || '').toLowerCase();
+          const href = link.getAttribute('href');
+          if (!href) return;
+          let resolved;
+          try {
+            resolved = new URL(href, prodUrl).href;
+          } catch (_) {
+            return;
+          }
+          if (rel.includes('apple-touch-icon')) {
+            appleIcons.push(resolved);
+          } else if (rel.includes('icon')) {
+            const clean = resolved.split('?')[0].toLowerCase();
+            if (clean.endsWith('.png') || clean.endsWith('.jpg') || clean.endsWith('.jpeg') || clean.endsWith('.webp')) {
+              pngIcons.push(resolved);
+            } else if (clean.endsWith('.svg')) {
+              svgIcons.push(resolved);
+            } else {
+              icoIcons.push(resolved);
+            }
+          } else if (rel === 'manifest') {
+            manifestHref = resolved;
+          }
+        });
+
+        doc.querySelectorAll('img[src]').forEach(img => {
+          const src = img.getAttribute('src');
+          if (!src || src.startsWith('data:')) return;
+          const attrText = `${img.className || ''} ${img.id || ''} ${img.getAttribute('alt') || ''} ${src}`.toLowerCase();
+          if (/(logo|brand|icon|thumb)/.test(attrText)) {
+            try {
+              brandImgs.push(new URL(src, prodUrl).href);
+            } catch (_) {}
+          }
+        });
+
+        const ogImage = doc.querySelector('meta[property="og:image"], meta[name="og:image"]')?.getAttribute('content');
+        if (ogImage) {
+          try {
+            pngIcons.push(new URL(ogImage, prodUrl).href);
+          } catch (_) {}
+        }
+
+        if (appleIcons.length === 0 && pngIcons.length === 0 && manifestHref) {
+          try {
+            const mRes = await fetch(manifestHref, { cache: 'no-store', signal: ctrl.signal });
+            if (mRes.ok) {
+              const mJson = await mRes.json();
+              if (Array.isArray(mJson.icons)) {
+                mJson.icons.forEach(ic => {
+                  if (ic && ic.src) {
+                    try {
+                      const u = new URL(ic.src, manifestHref).href;
+                      if (u.toLowerCase().endsWith('.png')) pngIcons.unshift(u);
+                      else svgIcons.push(u);
+                    } catch (_) {}
+                  }
+                });
+              }
+            }
+          } catch (_) {}
+        }
+
+        const allIcons = [...new Set([...appleIcons, ...pngIcons, ...svgIcons, ...brandImgs, ...icoIcons])];
+        return {
+          title: liveTitle,
+          logoUrl: allIcons[0] || null,
+          fallbacks: allIcons.slice(1)
+        };
+      } catch (_) {
+        return null;
+      } finally {
+        clearTimeout(tid);
+      }
+    }
+
+    function getInitialProjects() {
+      try {
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            const filtered = parsed.filter(item => !isThomasOnlyRepo(item.id, item.subtitle, []));
+            if (filtered.length > 0) {
+              return filtered.map(item => {
+                const known = KNOWN_METADATA[(item.id || '').toLowerCase()];
+                if (!known) return item;
+                return {
+                  ...item,
+                  category: known.category || item.category,
+                  logoUrl: known.logoUrl || item.logoUrl,
+                  extraFallbacks: known.extraFallbacks || item.extraFallbacks || [],
+                  logoFit: known.logoFit || item.logoFit || 'cover'
+                };
+              });
+            }
+          }
+        }
+      } catch (_) {}
+
+      const canonicalCases = {
+        'tomatocalc': 'Tomatocalc',
+        'medicalc': 'Medicalc',
+        'holidamn': 'Holidamn'
+      };
+
+      return Object.entries(KNOWN_METADATA).map(([key, meta]) => {
+        const repoSlug = canonicalCases[key] || key;
+        const prodUrl = meta.prodUrl || `https://mrthomaslef.github.io/${repoSlug}/`;
+        return {
+          id: repoSlug,
+          title: meta.title,
+          subtitle: meta.subtitle,
+          category: meta.category,
+          emoji: meta.emoji,
+          logoUrl: meta.logoUrl,
+          extraFallbacks: meta.extraFallbacks || [],
+          logoFit: meta.logoFit || 'cover',
+          prodUrl,
+          githubUrl: meta.githubUrl || `https://github.com/${GITHUB_USERNAME}/${repoSlug}`,
+          pushedAt: null,
+          isNew: false
+        };
+      });
+    }
+
+    let projects = getInitialProjects();
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let viewMode = localStorage.getItem(VIEW_MODE_KEY) || 'list';
+
+    function updateViewToggleIcon() {
+      const iconEl = document.getElementById('view-toggle-icon');
+      const labelEl = document.getElementById('view-toggle-label');
+      if (!iconEl) return;
+      if (viewMode === 'grid') {
+        iconEl.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />`;
+        if (labelEl) labelEl.textContent = 'Cartes';
+      } else {
+        iconEl.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />`;
+        if (labelEl) labelEl.textContent = 'Grille';
+      }
+    }
+
+    function toggleViewMode() {
+      viewMode = viewMode === 'list' ? 'grid' : 'list';
+      try {
+        localStorage.setItem(VIEW_MODE_KEY, viewMode);
+      } catch (_) {}
+      updateViewToggleIcon();
+      renderProjects();
+    }
+
+    function pickRandomApp() {
+      if (!projects || projects.length === 0) return;
+      const winner = projects[Math.floor(Math.random() * projects.length)];
+      activeCategory = 'all';
+      searchQuery = '';
+      const searchEl = document.getElementById('search-input');
+      if (searchEl) searchEl.value = '';
+      updateSearchClearVisibility();
+      renderTabs();
+      renderFavoritesDock();
+      renderProjects();
+
+      const cardEl = document.getElementById(`app-card-${winner.id.toLowerCase()}`);
+      if (cardEl) {
+        cardEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        cardEl.classList.add('roulette-winner');
+        setTimeout(() => cardEl.classList.remove('roulette-winner'), 3200);
+      }
+    }
+
+    function renderTabs() {
+      const tabsEl = document.getElementById('category-tabs');
+      const favCount = projects.filter(p => isFavorite(p.id)).length;
+
+      const allBtn = `
+        <button onclick="setCategory('all')" class="shrink-0 px-4 py-1.5 md:py-2 rounded-full text-xs font-extrabold transition active:scale-95 ${
+          activeCategory === 'all'
+            ? 'bg-gradient-to-r from-yellow-300 via-pink-400 to-rose-400 text-slate-950 shadow-lg shadow-pink-500/25'
+            : 'bg-white/[0.07] text-purple-200/80 hover:text-white border border-white/10'
+        }">
+          ✨ Tout (${projects.length})
+        </button>
+      `;
+
+      const favBtn = `
+        <button onclick="setCategory('favorites')" class="shrink-0 inline-flex items-center gap-1.5 px-3.5 md:px-4 py-1.5 md:py-2 rounded-full text-xs font-extrabold transition active:scale-95 ${
+          activeCategory === 'favorites'
+            ? 'bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 text-slate-950 shadow-lg shadow-amber-500/25'
+            : 'bg-amber-400/10 text-amber-200 hover:bg-amber-400/20 border border-amber-300/25'
+        }">
+          <span>⭐</span>
+          <span>Favoris</span>
+          <span class="opacity-80 text-[11px]">${favCount}</span>
+        </button>
+      `;
+
+      const catBtns = CATEGORIES.map(cat => {
+        const count = projects.filter(p => p.category === cat.id).length;
+        const active = activeCategory === cat.id;
+        return `
+          <button onclick="setCategory('${cat.id}')" class="shrink-0 inline-flex items-center gap-1.5 px-3.5 md:px-4 py-1.5 md:py-2 rounded-full text-xs font-extrabold transition active:scale-95 ${
+            active
+              ? cat.pillActive
+              : 'bg-white/[0.07] text-purple-200/80 hover:text-white border border-white/10'
+          }">
+            <span>${cat.emoji}</span>
+            <span>${cat.name}</span>
+            <span class="opacity-70 text-[11px]">${count}</span>
+          </button>
+        `;
+      }).join('');
+
+      tabsEl.innerHTML = allBtn + favBtn + catBtns;
+    }
+
+    function renderAppLogo(p, sizeClass = 'w-14 h-14') {
+      const base = p.prodUrl.replace(/\/$/, '');
+      const primaryClean = (p.logoUrl || '').split('?')[0];
+      const rawFallbacks = [
+        ...(p.extraFallbacks || []),
+        `${base}/apple-touch-icon.png`,
+        `${base}/icon-192.png`,
+        `${base}/icon-512.png`,
+        `${base}/logo.png`,
+        `${base}/icon.png`,
+        `${base}/icon.svg`,
+        `${base}/assets/apple-touch-icon.png`,
+        `${base}/assets/icon.svg`,
+        `${base}/favicon.svg`,
+        `${base}/favicon.png`
+      ];
+
+      const seen = new Set([primaryClean]);
+      const fallbacks = [];
+      rawFallbacks.forEach(u => {
+        if (!u) return;
+        const c = u.split('?')[0];
+        if (!seen.has(c)) {
+          seen.add(c);
+          fallbacks.push(withLogoVersion(u, p));
+        }
+      });
+
+      const primarySrc = withLogoVersion(p.logoUrl, p);
+      const fitClass = p.logoFit === 'contain'
+        ? 'w-full h-full object-contain p-1.5 bg-slate-900'
+        : 'w-full h-full object-cover';
+
+      return `
+        <div class="${sizeClass} app-squircle bg-slate-900/90 border border-white/20 overflow-hidden flex items-center justify-center shrink-0">
+          <img
+            src="${primarySrc}"
+            alt="${p.title}"
+            data-fallbacks="${fallbacks.join('|')}"
+            data-emoji="${p.emoji || '💖'}"
+            onerror="handleLogoError(this)"
+            loading="lazy"
+            class="${fitClass}"
+          />
+        </div>
+      `;
+    }
+
+    function getOrderedFavoriteProjects() {
+      const byKey = new Map();
+      projects.forEach(p => {
+        if (p && p.id) byKey.set(p.id.toLowerCase(), p);
+      });
+      return favoriteList
+        .map(favKey => byKey.get(String(favKey || '').toLowerCase()))
+        .filter(Boolean);
+    }
+
+    function renderFavoritesDock() {
+      const dockSection = document.getElementById('favorites-dock-section');
+      const stripEl = document.getElementById('favorites-strip');
+      const countBadge = document.getElementById('fav-count-badge');
+      if (!dockSection || !stripEl) return;
+
+      const favItems = getOrderedFavoriteProjects();
+      if (countBadge) countBadge.textContent = String(favItems.length);
+
+      // Afficher le Dock Favoris quand on est sur "Tout" sans recherche active
+      if (favItems.length === 0 || activeCategory !== 'all' || searchQuery.trim() !== '') {
+        dockSection.classList.add('hidden');
+        return;
+      }
+
+      dockSection.classList.remove('hidden');
+
+      stripEl.innerHTML = favItems.map((p, idx) => `
+        <div class="fav-tile relative flex flex-col items-center text-center p-2 rounded-2xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 transition group">
+          <button
+            onclick="toggleFavorite(event, '${p.id}')"
+            title="Retirer des favoris"
+            class="star-btn absolute top-1.5 right-1.5 z-10 w-6 h-6 rounded-full ${isEditingFavorites ? 'bg-rose-500 text-white border-white/40' : 'bg-slate-950/75 text-yellow-300 border-yellow-400/40'} border flex items-center justify-center text-xs font-bold shadow"
+          >
+            ${isEditingFavorites ? '✕' : '★'}
+          </button>
+          <a href="${p.prodUrl}" target="_blank" rel="noopener" class="flex flex-col items-center w-full active:scale-90 transition">
+            ${renderAppLogo(p, 'w-14 h-14 md:w-16 md:h-16')}
+            <span class="text-[11px] md:text-xs font-extrabold text-white/95 line-clamp-1 leading-tight mt-1.5 group-hover:text-yellow-200 transition">
+              ${p.title.split('—')[0].trim()}
+            </span>
+          </a>
+          ${isEditingFavorites ? `
+            <div class="flex items-center justify-center gap-1.5 mt-1.5 w-full">
+              <button
+                onclick="moveFavorite(event, '${p.id}', -1)"
+                ${idx === 0 ? 'disabled' : ''}
+                title="Déplacer à gauche"
+                class="px-2 py-0.5 rounded-lg bg-slate-950/80 border border-white/15 text-[10px] font-bold text-yellow-200 disabled:opacity-30 active:scale-90"
+              >◀</button>
+              <button
+                onclick="moveFavorite(event, '${p.id}', 1)"
+                ${idx === favItems.length - 1 ? 'disabled' : ''}
+                title="Déplacer à droite"
+                class="px-2 py-0.5 rounded-lg bg-slate-950/80 border border-white/15 text-[10px] font-bold text-yellow-200 disabled:opacity-30 active:scale-90"
+              >▶</button>
+            </div>
+          ` : ''}
+        </div>
+      `).join('');
+    }
+
+    function renderProjects() {
+      const container = document.getElementById('projects-container');
+      const q = searchQuery.trim().toLowerCase();
+
+      // Si l'onglet "⭐ Favoris" est sélectionné
+      if (activeCategory === 'favorites') {
+        const favItems = getOrderedFavoriteProjects().filter(p => {
+          if (!q) return true;
+          return `${p.title} ${p.subtitle} ${p.id}`.toLowerCase().includes(q);
+        });
+
+        if (favItems.length === 0) {
+          container.innerHTML = `
+            <div class="text-center py-12 px-4 rounded-3xl bg-white/[0.04] border border-white/10 space-y-2">
+              <div class="text-3xl">⭐</div>
+              <div class="font-fun text-base font-bold text-yellow-200">Aucun favori épinglé</div>
+              <p class="text-xs text-purple-200/70">Appuie sur l'étoile <strong>☆</strong> à côté de tes applications préférées pour les retrouver ici !</p>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = `
+          <section class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h2 class="font-fun text-sm md:text-base font-bold tracking-wide text-yellow-300 flex items-center gap-2">
+                <span class="text-base md:text-lg">⭐</span>
+                <span>Applications Favorites de Marie</span>
+              </h2>
+              <span class="px-2.5 py-0.5 rounded-full bg-yellow-400/20 text-[11px] md:text-xs text-yellow-200 font-bold">${favItems.length}</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 md:gap-4">
+              ${favItems.map(p => {
+                const cat = CATEGORIES.find(c => c.id === p.category) || CATEGORIES[0];
+                return renderAppCardHtml(p, cat);
+              }).join('')}
+            </div>
+          </section>
+        `;
+        return;
+      }
+
+      const visibleCategories = activeCategory === 'all'
+        ? CATEGORIES
+        : CATEGORIES.filter(c => c.id === activeCategory);
+
+      let html = '';
+
+      visibleCategories.forEach(cat => {
+        const items = projects.filter(p => {
+          if (p.category !== cat.id) return false;
+          if (!q) return true;
+          return `${p.title} ${p.subtitle} ${p.id}`.toLowerCase().includes(q);
+        });
+
+        if (items.length === 0) return;
+
+        if (viewMode === 'grid') {
+          html += `
+            <section class="space-y-3">
+              <div class="flex items-center justify-between px-1">
+                <h2 class="font-fun text-sm md:text-base font-bold tracking-wide text-pink-200 flex items-center gap-2">
+                  <span class="text-base md:text-lg">${cat.emoji}</span>
+                  <span>${cat.name}</span>
+                </h2>
+                <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-[11px] md:text-xs text-purple-200 font-bold">${items.length}</span>
+              </div>
+
+              <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-3 md:gap-4 lg:gap-5 pt-1">
+                ${items.map(p => {
+                  const fav = isFavorite(p.id);
+                  return `
+                    <div id="app-card-${p.id.toLowerCase()}" class="grid-tile relative flex flex-col items-center text-center p-2 md:p-3 rounded-2xl hover:bg-white/5 transition group">
+                      <button
+                        onclick="toggleFavorite(event, '${p.id}')"
+                        title="${fav ? 'Retirer des favoris' : 'Ajouter aux favoris'}"
+                        class="star-btn absolute top-1 right-1 z-10 w-6 h-6 rounded-full bg-slate-950/80 border ${fav ? 'border-yellow-400/50 text-yellow-300' : 'border-white/15 text-purple-300/50'} flex items-center justify-center text-xs shadow"
+                      >
+                        ${fav ? '★' : '☆'}
+                      </button>
+                      <a
+                        href="${p.prodUrl}"
+                        target="_blank"
+                        rel="noopener"
+                        class="flex flex-col items-center w-full active:scale-90 transition"
+                      >
+                        ${renderAppLogo(p, 'w-16 h-16 md:w-20 md:h-20')}
+                        <span class="text-[11px] md:text-xs font-bold text-white/95 line-clamp-2 leading-tight mt-2 group-hover:text-pink-300 transition">
+                          ${p.title.split('—')[0].trim()}
+                        </span>
+                      </a>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </section>
+          `;
+        } else {
+          html += `
+            <section class="space-y-3">
+              <div class="flex items-center justify-between px-1">
+                <h2 class="font-fun text-sm md:text-base font-bold tracking-wide text-pink-200 flex items-center gap-2">
+                  <span class="text-base md:text-lg">${cat.emoji}</span>
+                  <span>${cat.name}</span>
+                </h2>
+                <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-[11px] md:text-xs text-purple-200 font-bold">${items.length}</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5 md:gap-4">
+                ${items.map(p => renderAppCardHtml(p, cat)).join('')}
+              </div>
+            </section>
+          `;
+        }
+      });
+
+      if (!html) {
+        html = `
+          <div class="text-center py-12 text-sm text-purple-200/60 font-fun">
+            🕵️‍♀️ Aucune app trouvée pour « ${searchQuery} » dans le Mapp Store !
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function renderAppCardHtml(p, cat) {
+      const fav = isFavorite(p.id);
+      return `
+        <div id="app-card-${p.id.toLowerCase()}" class="app-card rounded-3xl p-3 md:p-4 flex items-center justify-between gap-2.5 md:gap-3.5 h-full">
+          <a href="${p.prodUrl}" target="_blank" rel="noopener" class="flex items-center gap-3 md:gap-3.5 min-w-0 flex-1">
+            ${renderAppLogo(p, 'w-14 h-14 md:w-16 md:h-16')}
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-1.5">
+                <span class="text-sm md:text-[15px] font-extrabold text-white truncate">${p.title}</span>
+                ${p.isNew ? '<span class="px-2 py-0.5 text-[10px] font-extrabold uppercase rounded-full bg-gradient-to-r from-yellow-300 to-pink-400 text-slate-950 shrink-0">NEW</span>' : ''}
+              </div>
+              <div class="text-xs text-purple-200/70 line-clamp-1 md:line-clamp-2 mt-0.5">${p.subtitle}</div>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-1 md:gap-1.5 shrink-0">
+            <button
+              onclick="toggleFavorite(event, '${p.id}')"
+              title="${fav ? 'Retirer des favoris' : 'Épingler dans mes favoris'}"
+              class="star-btn p-2 rounded-2xl ${fav ? 'bg-yellow-400/20 text-yellow-300 border border-yellow-300/40' : 'bg-white/5 text-purple-200/50 hover:text-yellow-200 border border-transparent'} text-sm leading-none"
+            >
+              ${fav ? '★' : '☆'}
+            </button>
+
+            <button
+              onclick="openAppPreview(event, '${p.id}')"
+              title="Aperçu rapide sur ordinateur"
+              class="hidden md:inline-flex p-2 rounded-2xl bg-white/5 hover:bg-white/15 text-purple-200/60 hover:text-cyan-300 transition"
+            >
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </button>
+
+            <a
+              href="${p.prodUrl}"
+              target="_blank"
+              rel="noopener"
+              class="px-3.5 py-2 rounded-full bg-gradient-to-r ${cat.badgeClass} font-fun font-bold text-xs flex items-center gap-1 shadow-md transition active:scale-90"
+            >
+              <span>${cat.ctaLabel}</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    function setCategory(catId) {
+      activeCategory = catId;
+      renderTabs();
+      renderFavoritesDock();
+      renderProjects();
+    }
+
+    function updateSearchClearVisibility() {
+      const clearBtn = document.getElementById('search-clear-btn');
+      const kbdHint = document.getElementById('search-kbd-hint');
+      const hasVal = searchQuery.trim().length > 0;
+      if (clearBtn) {
+        clearBtn.classList.toggle('hidden', !hasVal);
+        clearBtn.classList.toggle('flex', hasVal);
+      }
+      if (kbdHint) {
+        kbdHint.classList.toggle('md:inline-flex', !hasVal);
+        kbdHint.classList.toggle('!hidden', hasVal);
+      }
+    }
+
+    function handleSearch(val) {
+      searchQuery = val;
+      updateSearchClearVisibility();
+      renderFavoritesDock();
+      renderProjects();
+    }
+
+    function clearSearchInput() {
+      const searchEl = document.getElementById('search-input');
+      if (searchEl) {
+        searchEl.value = '';
+        searchEl.focus();
+      }
+      handleSearch('');
+    }
+
+    // --- APERÇU EN DIRECT SUR ORDINATEUR ---
+    function openAppPreview(event, projectId) {
+      if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+      const p = projects.find(item => item.id.toLowerCase() === String(projectId || '').toLowerCase());
+      if (!p) return;
+
+      const modal = document.getElementById('desktop-preview-modal');
+      const iframe = document.getElementById('preview-modal-iframe');
+      const titleEl = document.getElementById('preview-modal-title');
+      const urlEl = document.getElementById('preview-modal-url');
+      const openBtn = document.getElementById('preview-modal-open-btn');
+      if (!modal || !iframe) return;
+
+      titleEl.textContent = `${p.emoji || '💖'} ${p.title}`;
+      urlEl.textContent = p.prodUrl;
+      openBtn.href = p.prodUrl;
+      setPreviewViewport('desktop');
+      iframe.src = p.prodUrl;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAppPreview() {
+      const modal = document.getElementById('desktop-preview-modal');
+      const iframe = document.getElementById('preview-modal-iframe');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      if (iframe) iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+
+    function handlePreviewBackdropClick(event) {
+      if (event.target && event.target.id === 'desktop-preview-modal') {
+        closeAppPreview();
+      }
+    }
+
+    function setPreviewViewport(mode) {
+      const iframe = document.getElementById('preview-modal-iframe');
+      const btnDesktop = document.getElementById('preview-vp-desktop');
+      const btnMobile = document.getElementById('preview-vp-mobile');
+      if (!iframe) return;
+
+      if (mode === 'mobile') {
+        iframe.className = 'w-[412px] max-w-full h-[92%] rounded-[32px] border-4 border-white/20 shadow-2xl bg-slate-950 transition-all duration-300';
+        if (btnMobile) btnMobile.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-500 text-white transition';
+        if (btnDesktop) btnDesktop.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-purple-200/70 hover:text-white transition';
+      } else {
+        iframe.className = 'w-full h-full border-0 bg-slate-950 transition-all duration-300';
+        if (btnDesktop) btnDesktop.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-500 text-white transition';
+        if (btnMobile) btnMobile.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-purple-200/70 hover:text-white transition';
+      }
+    }
+
+    // Raccourcis clavier sur ordinateur (⌘K / Ctrl+K / / pour rechercher, Échap pour fermer, 1-5 pour les catégories)
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('desktop-preview-modal');
+      const isModalOpen = modal && !modal.classList.contains('hidden');
+
+      if (e.key === 'Escape') {
+        if (isModalOpen) {
+          closeAppPreview();
+          e.preventDefault();
+          return;
+        }
+        const searchEl = document.getElementById('search-input');
+        if (searchEl && (document.activeElement === searchEl || searchQuery.trim() !== '')) {
+          searchEl.value = '';
+          handleSearch('');
+          searchEl.blur();
+          e.preventDefault();
+        }
+        return;
+      }
+
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        const searchEl = document.getElementById('search-input');
+        if (searchEl) {
+          e.preventDefault();
+          searchEl.focus();
+          searchEl.select();
+        }
+        return;
+      }
+
+      const tag = (e.target && e.target.tagName) ? e.target.tagName.toUpperCase() : '';
+      const isTyping = ['INPUT', 'TEXTAREA', 'SELECT'].includes(tag) || (e.target && e.target.isContentEditable);
+      if (isTyping || isModalOpen || e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === '/') {
+        const searchEl = document.getElementById('search-input');
+        if (searchEl) {
+          e.preventDefault();
+          searchEl.focus();
+        }
+      } else if (['1', '2', '3', '4', '5'].includes(e.key)) {
+        const catOrder = ['all', 'favorites', ...CATEGORIES.map(c => c.id)];
+        const targetCat = catOrder[parseInt(e.key, 10) - 1];
+        if (targetCat) setCategory(targetCat);
+      }
+    });
+
+    // Synchronisation temps réel avec l'API GitHub (filtrée pour Marie uniquement)
+    async function syncFromGitHub(manual = false) {
+      const refreshIcon = document.getElementById('refresh-icon');
+      const subtitle = document.getElementById('sync-subtitle');
+      if (manual) {
+        lastManualSyncBust = String(Date.now());
+        if (refreshIcon) refreshIcon.classList.add('animate-spin');
+      }
+
+      try {
+        const [apiRes, jsonRes] = await Promise.allSettled([
+          fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=pushed`, {
+            headers: { 'Accept': 'application/vnd.github+json' },
+            cache: 'no-store'
+          }),
+          fetch(`./projects.json?t=${Date.now()}`, { cache: 'no-store' })
+        ]);
+
+        let jsonTitles = {};
+        let manifestArray = [];
+        if (jsonRes.status === 'fulfilled' && jsonRes.value.ok) {
+          const data = await jsonRes.value.json();
+          if (Array.isArray(data)) {
+            manifestArray = data;
+            data.forEach(item => {
+              if (item.id) jsonTitles[item.id.toLowerCase()] = item;
+            });
+          }
+        }
+
+        let syncedList = [];
+
+        if (apiRes.status === 'fulfilled' && apiRes.value.ok) {
+          const repos = await apiRes.value.json();
+
+          repos.forEach(r => {
+            if (!r || !r.name) return;
+            const key = r.name.toLowerCase();
+            if (isThomasOnlyRepo(r.name, r.description, r.topics)) return;
+
+            const known = KNOWN_METADATA[key];
+            const fromManifest = jsonTitles[key];
+            const hasLiveUrl = Boolean(r.has_pages || (r.homepage && r.homepage.trim().startsWith('http')) || known);
+
+            if (!hasLiveUrl) return;
+
+            const autoClass = classifyNewRepo(r);
+            const prodUrl = (r.homepage && r.homepage.trim().startsWith('http'))
+              ? r.homepage.trim()
+              : (known && known.prodUrl)
+                ? known.prodUrl
+                : (fromManifest && fromManifest.prodUrl)
+                  ? fromManifest.prodUrl
+                  : `https://${GITHUB_USERNAME.toLowerCase()}.github.io/${r.name}/`;
+
+            const logoUrl = (known && known.logoUrl)
+              || (fromManifest && fromManifest.logoUrl)
+              || `${prodUrl.replace(/\/$/, '')}/apple-touch-icon.png`;
+
+            const isBrandNew = !known;
+
+            syncedList.push({
+              id: r.name,
+              title: (known && known.title) || (fromManifest && fromManifest.title) || formatRepoTitle(r.name),
+              subtitle: (known && known.subtitle) || r.description || (fromManifest && fromManifest.subtitle) || 'Application familiale en production',
+              category: (known && known.category) || autoClass.category || (fromManifest && fromManifest.category),
+              emoji: (known && known.emoji) || (fromManifest && fromManifest.emoji) || autoClass.emoji,
+              logoUrl,
+              extraFallbacks: (known && known.extraFallbacks) || [],
+              logoFit: (known && known.logoFit) || 'cover',
+              prodUrl,
+              githubUrl: r.html_url || `https://github.com/${GITHUB_USERNAME}/${r.name}`,
+              pushedAt: r.pushed_at || r.updated_at,
+              isNew: isBrandNew
+            });
+          });
+        } else if (manifestArray.length > 0) {
+          syncedList = manifestArray
+            .filter(item => !isThomasOnlyRepo(item.id, item.subtitle, []))
+            .map(item => {
+              const key = (item.id || '').toLowerCase();
+              const known = KNOWN_METADATA[key];
+              const autoClass = classifyNewRepo({ name: item.id || '', description: item.subtitle || '', topics: [] });
+              return {
+                id: item.id,
+                title: (known && known.title) || item.title || formatRepoTitle(item.id),
+                subtitle: (known && known.subtitle) || item.subtitle || 'Application familiale en production',
+                category: (known && known.category) || item.category || autoClass.category,
+                emoji: (known && known.emoji) || item.emoji || autoClass.emoji,
+                logoUrl: (known && known.logoUrl) || item.logoUrl || `${(item.prodUrl || '').replace(/\/$/, '')}/apple-touch-icon.png`,
+                extraFallbacks: (known && known.extraFallbacks) || [],
+                logoFit: (known && known.logoFit) || 'cover',
+                prodUrl: (known && known.prodUrl) || item.prodUrl,
+                githubUrl: item.githubUrl || `https://github.com/${GITHUB_USERNAME}/${item.id}`,
+                pushedAt: item.pushedAt || null,
+                isNew: !known
+              };
+            });
+        }
+
+        Object.entries(KNOWN_METADATA).forEach(([k, meta]) => {
+          if (meta.alwaysInclude && !syncedList.some(item => item.id.toLowerCase() === k)) {
+            syncedList.unshift({
+              id: k,
+              title: meta.title,
+              subtitle: meta.subtitle,
+              category: meta.category,
+              emoji: meta.emoji,
+              logoUrl: meta.logoUrl,
+              extraFallbacks: meta.extraFallbacks || [],
+              logoFit: meta.logoFit || 'cover',
+              prodUrl: meta.prodUrl || `https://${GITHUB_USERNAME.toLowerCase()}.github.io/${k}/`,
+              githubUrl: meta.githubUrl || `https://github.com/${GITHUB_USERNAME}/${k}`,
+              pushedAt: new Date().toISOString(),
+              isNew: false
+            });
+          }
+        });
+
+        if (syncedList.length > 0) {
+          projects = syncedList;
+          localStorage.setItem(CACHE_KEY, JSON.stringify(projects));
+          renderTabs();
+          renderFavoritesDock();
+          renderProjects();
+
+          const liveChecks = syncedList.map(async (item) => {
+            const key = item.id.toLowerCase();
+            const known = KNOWN_METADATA[key];
+            const hasLocalAssetLogo = known && known.logoUrl && !known.logoUrl.startsWith('http');
+            if (hasLocalAssetLogo) return false;
+
+            const liveMeta = await discoverLiveAppMeta(item.prodUrl);
+            if (!liveMeta) return false;
+
+            let changed = false;
+            if (!known && liveMeta.title && liveMeta.title !== item.title) {
+              item.title = liveMeta.title;
+              changed = true;
+            }
+            if (!known && liveMeta.logoUrl && liveMeta.logoUrl !== item.logoUrl) {
+              item.logoUrl = liveMeta.logoUrl;
+              changed = true;
+            }
+            if (liveMeta.fallbacks && liveMeta.fallbacks.length > 0) {
+              item.extraFallbacks = [...new Set([...(item.extraFallbacks || []), ...liveMeta.fallbacks])];
+              changed = true;
+            }
+            return changed;
+          });
+
+          Promise.allSettled(liveChecks).then(results => {
+            if (results.some(r => r.status === 'fulfilled' && r.value)) {
+              localStorage.setItem(CACHE_KEY, JSON.stringify(projects));
+              renderFavoritesDock();
+              renderProjects();
+            }
+          });
+        }
+
+        if (subtitle) {
+          subtitle.textContent = `${projects.length} apps pour Marie, Émile & la maison 💖`;
+        }
+      } catch (_) {
+        if (subtitle) {
+          subtitle.textContent = 'Toutes les apps de Marie, Émile & la maison 💖';
+        }
+      } finally {
+        if (refreshIcon) {
+          setTimeout(() => refreshIcon.classList.remove('animate-spin'), 350);
+        }
+      }
+    }
+
+    // --- PULL-TO-REFRESH ---
+    function initPullToRefresh() {
+      const ptrContainer = document.getElementById('ptr-container');
+      const ptrSpinner = document.getElementById('ptr-spinner');
+      const ptrLabel = document.getElementById('ptr-label');
+
+      const THRESHOLD = 68;
+      const MAX_PULL = 115;
+      let startY = 0;
+      let currentPull = 0;
+      let isPulling = false;
+      let isRefreshing = false;
+
+      const setArrowIcon = () => {
+        ptrSpinner.classList.remove('animate-spin');
+        ptrSpinner.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />`;
+      };
+
+      const setSpinIcon = () => {
+        ptrSpinner.style.transform = 'rotate(0deg)';
+        ptrSpinner.classList.add('animate-spin');
+        ptrSpinner.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />`;
+      };
+
+      const onStart = (y) => {
+        if (isRefreshing || window.scrollY > 2) return;
+        startY = y;
+        currentPull = 0;
+        isPulling = true;
+      };
+
+      const onMove = (y, event) => {
+        if (!isPulling || isRefreshing) return;
+        const delta = y - startY;
+        if (delta <= 0 || window.scrollY > 2) {
+          if (currentPull > 0) {
+            ptrContainer.style.height = '0px';
+            ptrContainer.style.opacity = '0';
+            currentPull = 0;
+          }
+          return;
+        }
+
+        currentPull = Math.min(MAX_PULL, Math.pow(delta, 0.82) * 1.6);
+        if (currentPull > 6 && event && event.cancelable) {
+          event.preventDefault();
+        }
+
+        ptrContainer.classList.add('dragging');
+        ptrContainer.style.height = `${currentPull}px`;
+        ptrContainer.style.opacity = String(Math.min(1, currentPull / (THRESHOLD * 0.85)));
+
+        if (currentPull >= THRESHOLD) {
+          ptrSpinner.style.transform = 'rotate(180deg)';
+          ptrLabel.textContent = 'Relâcher pour mettre à jour le Mapp Store 🚀';
+        } else {
+          ptrSpinner.style.transform = 'rotate(0deg)';
+          ptrLabel.textContent = 'Tirer pour rafraîchir le Mapp Store ✨';
+        }
+      };
+
+      const onEnd = async () => {
+        if (!isPulling || isRefreshing) return;
+        isPulling = false;
+        ptrContainer.classList.remove('dragging');
+
+        if (currentPull >= THRESHOLD) {
+          isRefreshing = true;
+          ptrContainer.style.height = '54px';
+          ptrContainer.style.opacity = '1';
+          ptrLabel.textContent = 'Synchronisation du Mapp Store...';
+          setSpinIcon();
+          if (navigator.vibrate) navigator.vibrate(12);
+
+          await syncFromGitHub(true);
+
+          ptrLabel.textContent = 'Mapp Store à jour ! 💖';
+          ptrSpinner.classList.remove('animate-spin');
+          setTimeout(() => {
+            ptrContainer.style.height = '0px';
+            ptrContainer.style.opacity = '0';
+            setTimeout(() => {
+              setArrowIcon();
+              isRefreshing = false;
+            }, 250);
+          }, 450);
+        } else {
+          ptrContainer.style.height = '0px';
+          ptrContainer.style.opacity = '0';
+        }
+        currentPull = 0;
+      };
+
+      window.addEventListener('touchstart', (e) => {
+        if (e.touches.length === 1) onStart(e.touches[0].clientY);
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches.length === 1) onMove(e.touches[0].clientY, e);
+      }, { passive: false });
+
+      window.addEventListener('touchend', onEnd, { passive: true });
+      window.addEventListener('touchcancel', onEnd, { passive: true });
+
+      // Sur Mac / ordinateur, défilement horizontal fluide à la molette ou au trackpad sur les onglets de catégories
+      window.addEventListener('wheel', (e) => {
+        if (e.ctrlKey || e.metaKey) return;
+        const dy = e.deltaY || 0;
+        const dx = e.deltaX || 0;
+        if (!dy && !dx) return;
+        const horiz = e.target && e.target.closest ? e.target.closest('#category-tabs, .overflow-x-auto') : null;
+        if (horiz && horiz.scrollWidth > horiz.clientWidth && Math.abs(dy) > Math.abs(dx)) {
+          horiz.scrollLeft += dy;
+          e.preventDefault();
+        }
+      }, { passive: false });
+    }
+
+    updateViewToggleIcon();
+    renderTabs();
+    renderFavoritesDock();
+    renderProjects();
+    initPullToRefresh();
+    syncFavoritesEverywhere();
+    syncFromGitHub(false);
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        syncFavoritesEverywhere();
+        syncFromGitHub(false);
+      }
+    });
+  </script>
+</body>
+</html>
