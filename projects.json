@@ -1,5 +1,16 @@
 [
   {
+    "id": "monopoly",
+    "title": "Jolly Roger's — Monopoly 3D",
+    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
+    "category": "emile-loisirs",
+    "emoji": "🏴‍☠️",
+    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
+    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
+    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
+    "pushedAt": "2026-11-04T22:40:45Z"
+  },
+  {
     "id": "quiz-pokemon",
     "title": "PokéQuiz — Attrape-les tous !",
     "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
@@ -9,17 +20,6 @@
     "prodUrl": "https://mrthomaslef.github.io/quiz-pokemon/",
     "githubUrl": "https://github.com/Mrthomaslef/quiz-pokemon",
     "pushedAt": "2026-11-04T22:38:46Z"
-  },
-  {
-    "id": "monopoly",
-    "title": "Jolly Roger's — Monopoly 3D",
-    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
-    "category": "emile-loisirs",
-    "emoji": "🏴‍☠️",
-    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
-    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
-    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
-    "pushedAt": "2026-11-04T22:38:44Z"
   },
   {
     "id": "quiz-trentenaires",
