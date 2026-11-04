@@ -59,6 +59,13 @@ KNOWN_METADATA = {
         "emoji": "🍷",
         "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
     },
+    "voyages-voyages": {
+        "title": "Voyages • Voyages — Hub & Cartes",
+        "subtitle": "Cartes Avantage SNCF & Air France Week-End+ (Marie & Thomas), Vacances & Guichet Express",
+        "category": "famille-quotidien",
+        "emoji": "✈️",
+        "logoUrl": "https://mrthomaslef.github.io/voyages-voyages/assets/icon.svg",
+    },
     "assistante-maternelle": {
         "title": "AssMat — Paie & Pajemploi",
         "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",

@@ -1,5 +1,16 @@
 [
   {
+    "id": "voyages-voyages",
+    "title": "Voyages • Voyages — Hub & Cartes",
+    "subtitle": "Cartes Avantage SNCF & Air France Week-End+ (Marie & Thomas), Vacances & Guichet Express",
+    "category": "famille-quotidien",
+    "emoji": "✈️",
+    "logoUrl": "https://mrthomaslef.github.io/voyages-voyages/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/voyages-voyages/",
+    "githubUrl": "https://github.com/Mrthomaslef/voyages-voyages",
+    "pushedAt": "2026-11-04T22:01:06Z"
+  },
+  {
     "id": "restaurant",
     "title": "Resto en Amoureux — Marie & Thomas",
     "subtitle": "Créneaux libres M&T + Émile chez les grands-parents & Réservation auto",
@@ -8,7 +19,7 @@
     "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
     "prodUrl": "https://mrthomaslef.github.io/restaurant/",
     "githubUrl": "https://github.com/Mrthomaslef/restaurant",
-    "pushedAt": "2026-11-04T21:44:57Z"
+    "pushedAt": "2026-11-04T21:57:23Z"
   },
   {
     "id": "agenda-famille",
