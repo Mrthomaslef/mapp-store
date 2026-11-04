@@ -59,6 +59,13 @@ KNOWN_METADATA = {
         "emoji": "🍷",
         "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
     },
+    "photo-famille": {
+        "title": "Album Famille Fontenay — WhatsApp",
+        "subtitle": "1 432 photos de famille classées par thème (Émile, Étretat/Yport/Corse, Ski, Fêtes & Messages)",
+        "category": "famille-quotidien",
+        "emoji": "📸",
+        "logoUrl": "https://mrthomaslef.github.io/photo-famille/apple-touch-icon.png",
+    },
     "voyages-voyages": {
         "title": "Voyages • Voyages — Hub & Cartes",
         "subtitle": "Cartes Avantage SNCF & Air France Week-End+ (Marie & Thomas), Vacances & Guichet Express",
