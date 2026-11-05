@@ -38,6 +38,14 @@ EXCLUDED_REPOS = {
 }
 
 KNOWN_METADATA = {
+    "film-et-serie": {
+        "title": "CinePreload — Films & Séries (Stremio + TorBox)",
+        "subtitle": "Préchargement local 4K/VF des films et séries sur le Mac mini du salon",
+        "category": "famille-quotidien",
+        "emoji": "🎬",
+        "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
+        "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg",
+    },
     "biblio-marie": {
         "title": "BiblioMarie — Infectiologie pédiatrique",
         "subtitle": "Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français",
@@ -207,6 +215,22 @@ def main():
                 "githubUrl": repo.get("html_url") or f"https://github.com/{GITHUB_USERNAME}/{name}",
                 "pushedAt": repo.get("pushed_at") or repo.get("updated_at"),
             }
+        )
+
+    if not any(item["id"].lower() == "film-et-serie" for item in output):
+        output.insert(
+            0,
+            {
+                "id": "film-et-serie",
+                "title": "CinePreload — Films & Séries (Stremio + TorBox)",
+                "subtitle": "Préchargement local 4K/VF des films et séries sur le Mac mini du salon",
+                "category": "famille-quotidien",
+                "emoji": "🎬",
+                "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg",
+                "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
+                "githubUrl": f"https://github.com/{GITHUB_USERNAME}/allinone/tree/main/film-et-serie",
+                "pushedAt": output[0]["pushedAt"] if output else None,
+            },
         )
 
     out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "projects.json")

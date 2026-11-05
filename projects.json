@@ -1,5 +1,16 @@
 [
   {
+    "id": "film-et-serie",
+    "title": "CinePreload — Films & Séries (Stremio + TorBox)",
+    "subtitle": "Préchargement local 4K/VF des films et séries sur le Mac mini du salon",
+    "category": "famille-quotidien",
+    "emoji": "🎬",
+    "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
+    "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
+    "pushedAt": "2026-11-05T06:30:51Z"
+  },
+  {
     "id": "quiz-pokemon",
     "title": "PokéQuiz — Attrape-les tous !",
     "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
