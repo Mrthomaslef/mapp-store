@@ -8,7 +8,7 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-05T20:05:37Z"
+    "pushedAt": "2026-11-05T21:49:12Z"
   },
   {
     "id": "ayn-thor",
@@ -19,7 +19,106 @@
     "logoUrl": "https://mrthomaslef.github.io/ayn-thor/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
-    "pushedAt": "2026-11-05T20:05:37Z"
+    "pushedAt": "2026-11-05T21:49:12Z"
+  },
+  {
+    "id": "quiz-pokemon",
+    "title": "PokéQuiz — Attrape-les tous !",
+    "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
+    "category": "emile-loisirs",
+    "emoji": "⚡",
+    "logoUrl": "https://mrthomaslef.github.io/quiz-pokemon/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/quiz-pokemon/",
+    "githubUrl": "https://github.com/Mrthomaslef/quiz-pokemon",
+    "pushedAt": "2026-11-05T21:49:05Z"
+  },
+  {
+    "id": "monopoly",
+    "title": "Jolly Roger's — Monopoly 3D",
+    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
+    "category": "emile-loisirs",
+    "emoji": "🏴‍☠️",
+    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
+    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
+    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
+    "pushedAt": "2026-11-05T21:49:03Z"
+  },
+  {
+    "id": "quiz-trentenaires",
+    "title": "QUIZ du 7TER",
+    "subtitle": "Grand Quiz Show multijoueur (2 couples / 4 joueurs)",
+    "category": "emile-loisirs",
+    "emoji": "🎉",
+    "logoUrl": "https://mrthomaslef.github.io/quiz-trentenaires/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/quiz-trentenaires/",
+    "githubUrl": "https://github.com/Mrthomaslef/quiz-trentenaires",
+    "pushedAt": "2026-11-05T21:48:58Z"
+  },
+  {
+    "id": "pocket-tcg-family",
+    "title": "milTCG — Pocket Family",
+    "subtitle": "Ouverture de boosters & collection de cartes personnalisées en famille",
+    "category": "emile-loisirs",
+    "emoji": "🃏",
+    "logoUrl": "https://mrthomaslef.github.io/pocket-tcg-family/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/pocket-tcg-family/",
+    "githubUrl": "https://github.com/Mrthomaslef/pocket-tcg-family",
+    "pushedAt": "2026-11-05T21:48:56Z"
+  },
+  {
+    "id": "photo-famille",
+    "title": "Album Famille Fontenay — WhatsApp",
+    "subtitle": "1 432 photos de famille classées par thème (Émile, Étretat/Yport/Corse, Ski, Fêtes & Messages)",
+    "category": "famille-quotidien",
+    "emoji": "📸",
+    "logoUrl": "https://mrthomaslef.github.io/photo-famille/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/photo-famille/",
+    "githubUrl": "https://github.com/Mrthomaslef/photo-famille",
+    "pushedAt": "2026-11-05T21:48:46Z"
+  },
+  {
+    "id": "assistante-maternelle",
+    "title": "AssMat — Paie & Pajemploi",
+    "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
+    "category": "famille-quotidien",
+    "emoji": "👶",
+    "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
+    "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
+    "pushedAt": "2026-11-05T21:48:43Z"
+  },
+  {
+    "id": "voyages-voyages",
+    "title": "Voyages • Voyages — Hub & Cartes",
+    "subtitle": "Cartes Avantage SNCF & Air France Week-End+ (Marie & Thomas), Vacances & Guichet Express",
+    "category": "famille-quotidien",
+    "emoji": "✈️",
+    "logoUrl": "https://mrthomaslef.github.io/voyages-voyages/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/voyages-voyages/",
+    "githubUrl": "https://github.com/Mrthomaslef/voyages-voyages",
+    "pushedAt": "2026-11-05T21:48:41Z"
+  },
+  {
+    "id": "agenda-famille",
+    "title": "Agenda Famille — Marie & Thomas",
+    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
+    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
+    "pushedAt": "2026-11-05T21:48:37Z"
+  },
+  {
+    "id": "biblio-marie",
+    "title": "BiblioMarie — Infectiologie pédiatrique",
+    "subtitle": "Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français",
+    "category": "pediatrie-clinique",
+    "emoji": "🧸",
+    "logoUrl": "https://mrthomaslef.github.io/biblio-marie/assets/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/biblio-marie/",
+    "githubUrl": "https://github.com/Mrthomaslef/biblio-marie",
+    "pushedAt": "2026-11-05T21:48:35Z"
   },
   {
     "id": "restaurant",
@@ -31,105 +130,6 @@
     "prodUrl": "https://mrthomaslef.github.io/restaurant/",
     "githubUrl": "https://github.com/Mrthomaslef/restaurant",
     "pushedAt": "2026-11-05T14:41:04Z"
-  },
-  {
-    "id": "agenda-famille",
-    "title": "Agenda Famille — Marie & Thomas",
-    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
-    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
-    "pushedAt": "2026-11-05T12:30:57Z"
-  },
-  {
-    "id": "quiz-pokemon",
-    "title": "PokéQuiz — Attrape-les tous !",
-    "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
-    "category": "emile-loisirs",
-    "emoji": "⚡",
-    "logoUrl": "https://mrthomaslef.github.io/quiz-pokemon/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/quiz-pokemon/",
-    "githubUrl": "https://github.com/Mrthomaslef/quiz-pokemon",
-    "pushedAt": "2026-11-05T06:30:51Z"
-  },
-  {
-    "id": "monopoly",
-    "title": "Jolly Roger's — Monopoly 3D",
-    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
-    "category": "emile-loisirs",
-    "emoji": "🏴‍☠️",
-    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
-    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
-    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
-    "pushedAt": "2026-11-05T06:30:49Z"
-  },
-  {
-    "id": "quiz-trentenaires",
-    "title": "QUIZ du 7TER",
-    "subtitle": "Grand Quiz Show multijoueur (2 couples / 4 joueurs)",
-    "category": "emile-loisirs",
-    "emoji": "🎉",
-    "logoUrl": "https://mrthomaslef.github.io/quiz-trentenaires/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/quiz-trentenaires/",
-    "githubUrl": "https://github.com/Mrthomaslef/quiz-trentenaires",
-    "pushedAt": "2026-11-05T06:30:48Z"
-  },
-  {
-    "id": "pocket-tcg-family",
-    "title": "milTCG — Pocket Family",
-    "subtitle": "Ouverture de boosters & collection de cartes personnalisées en famille",
-    "category": "emile-loisirs",
-    "emoji": "🃏",
-    "logoUrl": "https://mrthomaslef.github.io/pocket-tcg-family/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/pocket-tcg-family/",
-    "githubUrl": "https://github.com/Mrthomaslef/pocket-tcg-family",
-    "pushedAt": "2026-11-05T06:30:46Z"
-  },
-  {
-    "id": "photo-famille",
-    "title": "Album Famille Fontenay — WhatsApp",
-    "subtitle": "1 432 photos de famille classées par thème (Émile, Étretat/Yport/Corse, Ski, Fêtes & Messages)",
-    "category": "famille-quotidien",
-    "emoji": "📸",
-    "logoUrl": "https://mrthomaslef.github.io/photo-famille/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/photo-famille/",
-    "githubUrl": "https://github.com/Mrthomaslef/photo-famille",
-    "pushedAt": "2026-11-05T06:30:41Z"
-  },
-  {
-    "id": "assistante-maternelle",
-    "title": "AssMat — Paie & Pajemploi",
-    "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
-    "category": "famille-quotidien",
-    "emoji": "👶",
-    "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
-    "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
-    "pushedAt": "2026-11-05T06:30:39Z"
-  },
-  {
-    "id": "voyages-voyages",
-    "title": "Voyages • Voyages — Hub & Cartes",
-    "subtitle": "Cartes Avantage SNCF & Air France Week-End+ (Marie & Thomas), Vacances & Guichet Express",
-    "category": "famille-quotidien",
-    "emoji": "✈️",
-    "logoUrl": "https://mrthomaslef.github.io/voyages-voyages/assets/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/voyages-voyages/",
-    "githubUrl": "https://github.com/Mrthomaslef/voyages-voyages",
-    "pushedAt": "2026-11-05T06:30:38Z"
-  },
-  {
-    "id": "biblio-marie",
-    "title": "BiblioMarie — Infectiologie pédiatrique",
-    "subtitle": "Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français",
-    "category": "pediatrie-clinique",
-    "emoji": "🧸",
-    "logoUrl": "https://mrthomaslef.github.io/biblio-marie/assets/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/biblio-marie/",
-    "githubUrl": "https://github.com/Mrthomaslef/biblio-marie",
-    "pushedAt": "2026-11-05T06:30:33Z"
   },
   {
     "id": "dinociel-app-educative",
