@@ -1,16 +1,5 @@
 [
   {
-    "id": "monopoly",
-    "title": "Jolly Roger's — Monopoly 3D",
-    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
-    "category": "emile-loisirs",
-    "emoji": "🏴‍☠️",
-    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
-    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
-    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
-    "pushedAt": "2026-11-04T22:40:45Z"
-  },
-  {
     "id": "quiz-pokemon",
     "title": "PokéQuiz — Attrape-les tous !",
     "subtitle": "Quiz interactif pour apprendre les noms des Pokémon (Générations 1 à 3)",
@@ -19,7 +8,18 @@
     "logoUrl": "https://mrthomaslef.github.io/quiz-pokemon/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/quiz-pokemon/",
     "githubUrl": "https://github.com/Mrthomaslef/quiz-pokemon",
-    "pushedAt": "2026-11-04T22:38:46Z"
+    "pushedAt": "2026-11-05T06:30:51Z"
+  },
+  {
+    "id": "monopoly",
+    "title": "Jolly Roger's — Monopoly 3D",
+    "subtitle": "Jeu de plateau Monopoly 3D des Caraïbes (Batailles navales, Îles & Trésors)",
+    "category": "emile-loisirs",
+    "emoji": "🏴‍☠️",
+    "logoUrl": "https://mrthomaslef.github.io/monopoly/assets/pirate_logo.png",
+    "prodUrl": "https://mrthomaslef.github.io/monopoly/",
+    "githubUrl": "https://github.com/Mrthomaslef/monopoly",
+    "pushedAt": "2026-11-05T06:30:49Z"
   },
   {
     "id": "quiz-trentenaires",
@@ -30,7 +30,7 @@
     "logoUrl": "https://mrthomaslef.github.io/quiz-trentenaires/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/quiz-trentenaires/",
     "githubUrl": "https://github.com/Mrthomaslef/quiz-trentenaires",
-    "pushedAt": "2026-11-04T22:38:42Z"
+    "pushedAt": "2026-11-05T06:30:48Z"
   },
   {
     "id": "pocket-tcg-family",
@@ -41,7 +41,7 @@
     "logoUrl": "https://mrthomaslef.github.io/pocket-tcg-family/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/pocket-tcg-family/",
     "githubUrl": "https://github.com/Mrthomaslef/pocket-tcg-family",
-    "pushedAt": "2026-11-04T22:38:41Z"
+    "pushedAt": "2026-11-05T06:30:46Z"
   },
   {
     "id": "photo-famille",
@@ -52,7 +52,7 @@
     "logoUrl": "https://mrthomaslef.github.io/photo-famille/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/photo-famille/",
     "githubUrl": "https://github.com/Mrthomaslef/photo-famille",
-    "pushedAt": "2026-11-04T22:38:36Z"
+    "pushedAt": "2026-11-05T06:30:41Z"
   },
   {
     "id": "assistante-maternelle",
@@ -63,7 +63,7 @@
     "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
     "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
-    "pushedAt": "2026-11-04T22:38:34Z"
+    "pushedAt": "2026-11-05T06:30:39Z"
   },
   {
     "id": "voyages-voyages",
@@ -74,7 +74,7 @@
     "logoUrl": "https://mrthomaslef.github.io/voyages-voyages/assets/icon.svg",
     "prodUrl": "https://mrthomaslef.github.io/voyages-voyages/",
     "githubUrl": "https://github.com/Mrthomaslef/voyages-voyages",
-    "pushedAt": "2026-11-04T22:38:32Z"
+    "pushedAt": "2026-11-05T06:30:38Z"
   },
   {
     "id": "restaurant",
@@ -85,7 +85,7 @@
     "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
     "prodUrl": "https://mrthomaslef.github.io/restaurant/",
     "githubUrl": "https://github.com/Mrthomaslef/restaurant",
-    "pushedAt": "2026-11-04T22:38:30Z"
+    "pushedAt": "2026-11-05T06:30:36Z"
   },
   {
     "id": "agenda-famille",
@@ -96,7 +96,7 @@
     "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
     "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
     "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
-    "pushedAt": "2026-11-04T22:38:29Z"
+    "pushedAt": "2026-11-05T06:30:35Z"
   },
   {
     "id": "biblio-marie",
@@ -107,7 +107,7 @@
     "logoUrl": "https://mrthomaslef.github.io/biblio-marie/assets/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/biblio-marie/",
     "githubUrl": "https://github.com/Mrthomaslef/biblio-marie",
-    "pushedAt": "2026-11-04T22:38:27Z"
+    "pushedAt": "2026-11-05T06:30:33Z"
   },
   {
     "id": "dinociel-app-educative",
