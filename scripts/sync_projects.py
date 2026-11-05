@@ -44,7 +44,7 @@ KNOWN_METADATA = {
         "category": "famille-quotidien",
         "emoji": "🎬",
         "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
-        "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg",
+        "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     },
     "biblio-marie": {
         "title": "BiblioMarie — Infectiologie pédiatrique",
@@ -226,7 +226,7 @@ def main():
                 "subtitle": "Préchargement local 4K/VF des films et séries sur le Mac mini du salon",
                 "category": "famille-quotidien",
                 "emoji": "🎬",
-                "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg",
+                "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
                 "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
                 "githubUrl": f"https://github.com/{GITHUB_USERNAME}/allinone/tree/main/film-et-serie",
                 "pushedAt": output[0]["pushedAt"] if output else None,
