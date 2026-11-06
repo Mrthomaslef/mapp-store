@@ -8,7 +8,29 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-06T06:31:23Z"
+    "pushedAt": "2026-11-06T07:57:04Z"
+  },
+  {
+    "id": "assurance",
+    "title": "AssurImpôts & Contrats — Marie & Thomas",
+    "subtitle": "Synthèse Assurances (Habitation, Auto, Mutuelle ACTIL Émile/Marie/Thomas, Prêt 1,30%), Impôts & 317 Documents officiels",
+    "category": "famille-quotidien",
+    "emoji": "🛡️",
+    "logoUrl": "https://mrthomaslef.github.io/assurance/icon.svg?v=2",
+    "prodUrl": "https://mrthomaslef.github.io/assurance/",
+    "githubUrl": "https://github.com/Mrthomaslef/assurance",
+    "pushedAt": "2026-11-06T07:57:04Z"
+  },
+  {
+    "id": "agenda-famille",
+    "title": "Agenda Famille — Marie & Thomas",
+    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
+    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
+    "pushedAt": "2026-11-06T07:48:28Z"
   },
   {
     "id": "ayn-thor",
@@ -19,7 +41,7 @@
     "logoUrl": "https://mrthomaslef.github.io/ayn-thor/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
-    "pushedAt": "2026-11-06T06:31:23Z"
+    "pushedAt": "2026-11-06T07:41:37Z"
   },
   {
     "id": "quiz-pokemon",
@@ -108,17 +130,6 @@
     "prodUrl": "https://mrthomaslef.github.io/restaurant/",
     "githubUrl": "https://github.com/Mrthomaslef/restaurant",
     "pushedAt": "2026-11-06T06:30:56Z"
-  },
-  {
-    "id": "agenda-famille",
-    "title": "Agenda Famille — Marie & Thomas",
-    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
-    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
-    "pushedAt": "2026-11-06T06:30:54Z"
   },
   {
     "id": "biblio-marie",
