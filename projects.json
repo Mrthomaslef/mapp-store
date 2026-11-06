@@ -8,7 +8,29 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-06T14:17:48Z"
+    "pushedAt": "2026-11-06T22:29:57Z"
+  },
+  {
+    "id": "pdf-master",
+    "title": "PDF Master — Lecteur & Éditeur PDF",
+    "subtitle": "Lire, remplir, signer, surligner, tamponner et fusionner n'importe quel PDF sur téléphone ou ordinateur (100% local)",
+    "category": "famille-quotidien",
+    "emoji": "📄",
+    "logoUrl": "https://mrthomaslef.github.io/pdf-master/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/pdf-master/",
+    "githubUrl": "https://github.com/Mrthomaslef/pdf-master",
+    "pushedAt": "2026-11-06T22:29:57Z"
+  },
+  {
+    "id": "anatomie-quiz",
+    "title": "Anatomie Quiz",
+    "subtitle": "Quiz interactif sur les 92 planches IMAIOS e-Anatomy (Coupes axiales, Nerfs, Artères, Veines, Muscles, Os) · 4 modes de révision",
+    "category": "emile-loisirs",
+    "emoji": "🦕",
+    "logoUrl": "https://mrthomaslef.github.io/allinone/anatomie-quiz/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/allinone/anatomie-quiz/",
+    "githubUrl": "https://github.com/Mrthomaslef/anatomie-quiz",
+    "pushedAt": "2026-11-06T22:26:08Z"
   },
   {
     "id": "restaurant",

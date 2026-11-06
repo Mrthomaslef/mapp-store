@@ -38,6 +38,14 @@ EXCLUDED_REPOS = {
 }
 
 KNOWN_METADATA = {
+    "pdf-master": {
+        "title": "PDF Master — Lecteur & Éditeur PDF",
+        "subtitle": "Lire, remplir, signer, surligner, tamponner et fusionner n'importe quel PDF sur téléphone ou ordinateur (100% local)",
+        "category": "famille-quotidien",
+        "emoji": "📄",
+        "prodUrl": "https://mrthomaslef.github.io/pdf-master/",
+        "logoUrl": "https://mrthomaslef.github.io/pdf-master/assets/icon.svg",
+    },
     "assurance": {
         "title": "AssurImpôts & Contrats — Marie & Thomas",
         "subtitle": "Synthèse Assurances (Habitation, Auto, Mutuelle ACTIL Émile/Marie/Thomas, Prêt 1,30%), Impôts & 317 Documents officiels",
