@@ -8,7 +8,18 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-06T22:44:28Z"
+    "pushedAt": "2026-11-07T02:04:17Z"
+  },
+  {
+    "id": "ayn-thor",
+    "title": "Ayn Thor",
+    "subtitle": "AYN Thor Remote Studio — Contrôle ADB Live, Écran à distance & Synchronisation GamingSSD (Mac mini)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/ayn-thor/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
+    "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
+    "pushedAt": "2026-11-07T02:04:17Z"
   },
   {
     "id": "pdf-master",
@@ -64,17 +75,6 @@
     "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
     "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
     "pushedAt": "2026-11-06T07:48:28Z"
-  },
-  {
-    "id": "ayn-thor",
-    "title": "Ayn Thor",
-    "subtitle": "AYN Thor Remote Studio — Contrôle ADB Live, Écran à distance & Synchronisation GamingSSD (Mac mini)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/ayn-thor/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
-    "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
-    "pushedAt": "2026-11-06T07:41:37Z"
   },
   {
     "id": "quiz-pokemon",
