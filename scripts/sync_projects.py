@@ -38,6 +38,14 @@ EXCLUDED_REPOS = {
 }
 
 KNOWN_METADATA = {
+    "pokemon-play-it": {
+        "title": "Pokémon : À Toi de jouer ! (Play It! CD-ROM VF 2000)",
+        "subtitle": "Intégrale CD-ROM VF extraite via Craft Anything · 241 cartes FR (Base, Jungle, Fossile, Rocket), 38 Decks, Sprites .is, Voix VF Juliette, Musiques & 151 Cris",
+        "category": "emile-loisirs",
+        "emoji": "🃏",
+        "prodUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/",
+        "logoUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/assets/icon.svg?v=2",
+    },
     "carte-et-abonnement": {
         "title": "Pass Zoo de Vincennes & MNHN — Billets & Abonnements",
         "subtitle": "Portefeuille mobile hors-ligne des 2 Pass Annuels SOLO (Zoo de Vincennes, Ménagerie, Grande Galerie, Musée de l'Homme) · QR Codes tourniquet & PDF",
@@ -239,6 +247,22 @@ def main():
                 "githubUrl": repo.get("html_url") or f"https://github.com/{GITHUB_USERNAME}/{name}",
                 "pushedAt": repo.get("pushed_at") or repo.get("updated_at"),
             }
+        )
+
+    if not any(item["id"].lower() == "pokemon-play-it" for item in output):
+        output.insert(
+            0,
+            {
+                "id": "pokemon-play-it",
+                "title": "Pokémon : À Toi de jouer ! (Play It! CD-ROM VF 2000)",
+                "subtitle": "Intégrale CD-ROM VF extraite via Craft Anything · 241 cartes FR (Base, Jungle, Fossile, Rocket), 38 Decks, Sprites .is, Voix VF Juliette, Musiques & 151 Cris",
+                "category": "emile-loisirs",
+                "emoji": "🃏",
+                "logoUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/assets/icon.svg?v=2",
+                "prodUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/",
+                "githubUrl": f"https://github.com/{GITHUB_USERNAME}/allinone/tree/main/pokemon-play-it",
+                "pushedAt": output[0]["pushedAt"] if output else None,
+            },
         )
 
     if not any(item["id"].lower() == "film-et-serie" for item in output):
