@@ -38,13 +38,13 @@ EXCLUDED_REPOS = {
 }
 
 KNOWN_METADATA = {
-    "pokemon-play-it": {
-        "title": "Pokémon : À Toi de jouer ! (Play It! CD-ROM VF 2000)",
+    "craft-anything-pokemon": {
+        "title": "Pokémon : À Toi de jouer ! — Édition CD-ROM 2000 (Craft Anything)",
         "subtitle": "Intégrale CD-ROM VF extraite via Craft Anything · 241 cartes FR (Base, Jungle, Fossile, Rocket), 38 Decks, Sprites .is, Voix VF Juliette, Musiques & 151 Cris",
         "category": "emile-loisirs",
         "emoji": "🃏",
-        "prodUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/",
-        "logoUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/assets/icon.svg?v=2",
+        "prodUrl": "https://mrthomaslef.github.io/allinone/craft-anything-pokemon/",
+        "logoUrl": "https://mrthomaslef.github.io/allinone/craft-anything-pokemon/assets/icon.svg?v=2",
     },
     "carte-et-abonnement": {
         "title": "Pass Zoo de Vincennes & MNHN — Billets & Abonnements",
@@ -249,18 +249,18 @@ def main():
             }
         )
 
-    if not any(item["id"].lower() == "pokemon-play-it" for item in output):
+    if not any(item["id"].lower() == "craft-anything-pokemon" for item in output):
         output.insert(
             0,
             {
-                "id": "pokemon-play-it",
-                "title": "Pokémon : À Toi de jouer ! (Play It! CD-ROM VF 2000)",
+                "id": "craft-anything-pokemon",
+                "title": "Pokémon : À Toi de jouer ! — Édition CD-ROM 2000 (Craft Anything)",
                 "subtitle": "Intégrale CD-ROM VF extraite via Craft Anything · 241 cartes FR (Base, Jungle, Fossile, Rocket), 38 Decks, Sprites .is, Voix VF Juliette, Musiques & 151 Cris",
                 "category": "emile-loisirs",
                 "emoji": "🃏",
-                "logoUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/assets/icon.svg?v=2",
-                "prodUrl": "https://mrthomaslef.github.io/allinone/pokemon-play-it/",
-                "githubUrl": f"https://github.com/{GITHUB_USERNAME}/allinone/tree/main/pokemon-play-it",
+                "logoUrl": "https://mrthomaslef.github.io/allinone/craft-anything-pokemon/assets/icon.svg?v=2",
+                "prodUrl": "https://mrthomaslef.github.io/allinone/craft-anything-pokemon/",
+                "githubUrl": f"https://github.com/{GITHUB_USERNAME}/allinone/tree/main/craft-anything-pokemon",
                 "pushedAt": output[0]["pushedAt"] if output else None,
             },
         )
