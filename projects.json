@@ -8,7 +8,18 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-08T02:05:51Z"
+    "pushedAt": "2026-11-08T13:26:09Z"
+  },
+  {
+    "id": "restaurant",
+    "title": "Resto en Amoureux — Marie & Thomas",
+    "subtitle": "Créneaux libres M&T + Émile chez les grands-parents & Réservation auto",
+    "category": "famille-quotidien",
+    "emoji": "🍷",
+    "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/restaurant/",
+    "githubUrl": "https://github.com/Mrthomaslef/restaurant",
+    "pushedAt": "2026-11-08T13:26:09Z"
   },
   {
     "id": "ayn-thor",
@@ -20,17 +31,6 @@
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
     "pushedAt": "2026-11-08T02:05:51Z"
-  },
-  {
-    "id": "restaurant",
-    "title": "Resto en Amoureux — Marie & Thomas",
-    "subtitle": "Créneaux libres M&T + Émile chez les grands-parents & Réservation auto",
-    "category": "famille-quotidien",
-    "emoji": "🍷",
-    "logoUrl": "https://mrthomaslef.github.io/restaurant/assets/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/restaurant/",
-    "githubUrl": "https://github.com/Mrthomaslef/restaurant",
-    "pushedAt": "2026-11-07T13:03:21Z"
   },
   {
     "id": "carte-et-abonnement",
