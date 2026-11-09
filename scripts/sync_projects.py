@@ -56,7 +56,7 @@ KNOWN_METADATA = {
     },
     "assurance": {
         "title": "AssurImpôts & Contrats — Marie & Thomas",
-        "subtitle": "Synthèse Assurances (Habitation, Auto, Mutuelle ACTIL Émile/Marie/Thomas, Prêt 1,30%), Impôts & 317 Documents officiels",
+        "subtitle": "Coffre chiffré : assurances, impôts & contrats de la famille — accès par phrase de passe",
         "category": "famille-quotidien",
         "emoji": "🛡️",
         "prodUrl": "https://mrthomaslef.github.io/assurance/",
