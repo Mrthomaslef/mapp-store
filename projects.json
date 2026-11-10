@@ -1,5 +1,16 @@
 [
   {
+    "id": "babyphone",
+    "title": "BabyPhone — AYN Thor ↔ iPhone",
+    "subtitle": "Babyphone pour Émile : l'AYN Thor écoute la chambre, l'iPhone (Thomas & Marie) entend en direct · alerte pleurs, parler à bébé, veilleuse, mode nuit écran noir · Wi-Fi ou 4G",
+    "category": "emile-loisirs",
+    "emoji": "👶",
+    "logoUrl": "https://mrthomaslef.github.io/mapp-store/assets/babyphone-icon.svg?v=1",
+    "prodUrl": "https://mrthomaslef.github.io/ayn-thor/babyphone/",
+    "githubUrl": "https://github.com/Mrthomaslef/ayn-thor/tree/main/babyphone",
+    "pushedAt": "2026-11-10T19:25:00Z"
+  },
+  {
     "id": "film-et-serie",
     "title": "CinePreload — Films & Séries (Stremio + TorBox)",
     "subtitle": "Préchargement local 4K/VF des films et séries sur le Mac mini du salon",
