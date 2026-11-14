@@ -38,6 +38,14 @@ EXCLUDED_REPOS = {
 }
 
 KNOWN_METADATA = {
+    "scan-doc": {
+        "title": "ScanDoc AI — Scanner iPhone vers Mon Drive",
+        "subtitle": "Scanner de documents papier iPhone sans filigrane · Filtre Couleur Magique, OCR Apple Vision, renommage IA & rangement automatique dans le Drive",
+        "category": "famille-quotidien",
+        "emoji": "📸",
+        "prodUrl": "https://mrthomaslef.github.io/scan-doc/",
+        "logoUrl": "https://mrthomaslef.github.io/scan-doc/assets/icon.svg?v=1",
+    },
     "carte-et-abonnement": {
         "title": "Pass Zoo de Vincennes & MNHN — Billets & Abonnements",
         "subtitle": "Portefeuille mobile hors-ligne des 2 Pass Annuels SOLO (Zoo de Vincennes, Ménagerie, Grande Galerie, Musée de l'Homme) · QR Codes tourniquet & PDF",
