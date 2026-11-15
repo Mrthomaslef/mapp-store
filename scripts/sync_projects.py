@@ -51,7 +51,7 @@ KNOWN_METADATA = {
         "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
         "category": "famille-quotidien",
         "emoji": "🏡",
-        "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/",
+        "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
         "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
     },
     "carte-et-abonnement": {
