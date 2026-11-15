@@ -46,6 +46,14 @@ KNOWN_METADATA = {
         "prodUrl": "https://mrthomaslef.github.io/scan-doc/",
         "logoUrl": "https://mrthomaslef.github.io/scan-doc/assets/icon.svg?v=1",
     },
+    "recherche-d-appartement": {
+        "title": "Appart côté Bois — Notre futur appart",
+        "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+        "category": "famille-quotidien",
+        "emoji": "🏡",
+        "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/",
+        "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
+    },
     "carte-et-abonnement": {
         "title": "Pass Zoo de Vincennes & MNHN — Billets & Abonnements",
         "subtitle": "Portefeuille mobile hors-ligne des 2 Pass Annuels SOLO (Zoo de Vincennes, Ménagerie, Grande Galerie, Musée de l'Homme) · QR Codes tourniquet & PDF",
