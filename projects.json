@@ -8,7 +8,7 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-19T02:17:52Z"
+    "pushedAt": "2026-11-19T19:25:59Z"
   },
   {
     "id": "babyphone",
@@ -19,7 +19,18 @@
     "logoUrl": "https://mrthomaslef.github.io/mapp-store/assets/babyphone-icon.svg?v=1",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/babyphone/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor/tree/main/babyphone",
-    "pushedAt": "2026-11-19T02:17:52Z"
+    "pushedAt": "2026-11-19T19:25:59Z"
+  },
+  {
+    "id": "recherche-d-appartement",
+    "title": "Appart côté Bois — Notre futur appart",
+    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
+    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
+    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
+    "pushedAt": "2026-11-19T19:25:59Z"
   },
   {
     "id": "la-boite-a-outils",
@@ -64,17 +75,6 @@
     "prodUrl": "https://mrthomaslef.github.io/resume-sims-interventionnel-2025/",
     "githubUrl": "https://github.com/Mrthomaslef/resume-sims-interventionnel-2025",
     "pushedAt": "2026-11-18T19:59:41Z"
-  },
-  {
-    "id": "recherche-d-appartement",
-    "title": "Appart côté Bois — Notre futur appart",
-    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
-    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
-    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
-    "pushedAt": "2026-11-18T19:17:34Z"
   },
   {
     "id": "anatomie-quiz",
