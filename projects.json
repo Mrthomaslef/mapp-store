@@ -35,11 +35,11 @@
   {
     "id": "recherche-d-appartement",
     "title": "Appart côté Bois — Notre futur appart",
-    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, toutes les photos en galerie, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
     "category": "famille-quotidien",
     "emoji": "🏡",
     "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
-    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
+    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=4",
     "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
     "pushedAt": "2026-11-21T18:00:28Z"
   },
