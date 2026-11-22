@@ -8,7 +8,7 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-21T02:00:53Z"
+    "pushedAt": "2026-11-21T18:00:28Z"
   },
   {
     "id": "babyphone",
@@ -19,7 +19,51 @@
     "logoUrl": "https://mrthomaslef.github.io/mapp-store/assets/babyphone-icon.svg?v=1",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/babyphone/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor/tree/main/babyphone",
-    "pushedAt": "2026-11-21T02:00:53Z"
+    "pushedAt": "2026-11-21T18:00:28Z"
+  },
+  {
+    "id": "recherche-d-appartement",
+    "title": "Appart côté Bois — Notre futur appart",
+    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
+    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
+    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
+    "pushedAt": "2026-11-21T18:00:28Z"
+  },
+  {
+    "id": "bestrepo",
+    "title": "Bestrepo",
+    "subtitle": "Les dépôts GitHub les plus étoilés, classés par centre d'intérêt, et comment s'en servir",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/bestrepo/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/bestrepo/",
+    "githubUrl": "https://github.com/Mrthomaslef/bestrepo",
+    "pushedAt": "2026-11-21T15:26:39Z"
+  },
+  {
+    "id": "achats-recurrents",
+    "title": "Achats récurrents Amazon",
+    "subtitle": "Lait, couches, Kérastase… commandés automatiquement — décoche pour annuler",
+    "category": "famille-quotidien",
+    "emoji": "🛒",
+    "logoUrl": "https://mrthomaslef.github.io/achats-recurrents/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/achats-recurrents/",
+    "githubUrl": "https://github.com/Mrthomaslef/achats-recurrents",
+    "pushedAt": "2026-11-21T14:32:56Z"
+  },
+  {
+    "id": "assistante-maternelle",
+    "title": "AssMat — Paie & Pajemploi",
+    "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
+    "category": "famille-quotidien",
+    "emoji": "👶",
+    "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
+    "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
+    "pushedAt": "2026-11-21T09:31:04Z"
   },
   {
     "id": "ayn-thor",
@@ -30,7 +74,7 @@
     "logoUrl": "https://mrthomaslef.github.io/ayn-thor/apple-touch-icon.png",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
-    "pushedAt": "2026-11-21T02:00:53Z"
+    "pushedAt": "2026-11-21T08:00:34Z"
   },
   {
     "id": "carte-et-abonnement",
@@ -42,28 +86,6 @@
     "prodUrl": "https://mrthomaslef.github.io/carte-et-abonnement/",
     "githubUrl": "https://github.com/Mrthomaslef/carte-et-abonnement",
     "pushedAt": "2026-11-20T23:19:44Z"
-  },
-  {
-    "id": "achats-recurrents",
-    "title": "Achats récurrents Amazon",
-    "subtitle": "Lait, couches, Kérastase… commandés automatiquement — décoche pour annuler",
-    "category": "famille-quotidien",
-    "emoji": "🛒",
-    "logoUrl": "https://mrthomaslef.github.io/achats-recurrents/assets/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/achats-recurrents/",
-    "githubUrl": "https://github.com/Mrthomaslef/achats-recurrents",
-    "pushedAt": "2026-11-20T20:05:12Z"
-  },
-  {
-    "id": "recherche-d-appartement",
-    "title": "Appart côté Bois — Notre futur appart",
-    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
-    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=3",
-    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
-    "pushedAt": "2026-11-20T19:01:19Z"
   },
   {
     "id": "la-boite-a-outils",
@@ -229,17 +251,6 @@
     "prodUrl": "https://mrthomaslef.github.io/photo-famille/",
     "githubUrl": "https://github.com/Mrthomaslef/photo-famille",
     "pushedAt": "2026-11-06T06:31:02Z"
-  },
-  {
-    "id": "assistante-maternelle",
-    "title": "AssMat — Paie & Pajemploi",
-    "subtitle": "Calculateur de salaire, présence d'Émile chez Mabrouka, congés & fiche de paie",
-    "category": "famille-quotidien",
-    "emoji": "👶",
-    "logoUrl": "https://mrthomaslef.github.io/assistante-maternelle/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/assistante-maternelle/",
-    "githubUrl": "https://github.com/Mrthomaslef/assistante-maternelle",
-    "pushedAt": "2026-11-06T06:31:00Z"
   },
   {
     "id": "biblio-marie",
