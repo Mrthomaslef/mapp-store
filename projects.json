@@ -8,7 +8,7 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-23T02:01:04Z"
+    "pushedAt": "2026-11-23T22:30:29Z"
   },
   {
     "id": "babyphone",
@@ -19,7 +19,51 @@
     "logoUrl": "https://mrthomaslef.github.io/mapp-store/assets/babyphone-icon.svg?v=1",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/babyphone/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor/tree/main/babyphone",
-    "pushedAt": "2026-11-23T02:01:04Z"
+    "pushedAt": "2026-11-23T22:30:29Z"
+  },
+  {
+    "id": "recherche-d-appartement",
+    "title": "Appart côté Bois — Notre futur appart",
+    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, toutes les photos en galerie, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
+    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=4",
+    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
+    "pushedAt": "2026-11-23T22:30:29Z"
+  },
+  {
+    "id": "achats-recurrents",
+    "title": "Achats récurrents Amazon",
+    "subtitle": "Lait, couches, Kérastase… commandés automatiquement — décoche pour annuler",
+    "category": "famille-quotidien",
+    "emoji": "🛒",
+    "logoUrl": "https://mrthomaslef.github.io/achats-recurrents/assets/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/achats-recurrents/",
+    "githubUrl": "https://github.com/Mrthomaslef/achats-recurrents",
+    "pushedAt": "2026-11-23T19:39:58Z"
+  },
+  {
+    "id": "bestrepo",
+    "title": "Bestrepo",
+    "subtitle": "Les dépôts GitHub les plus étoilés, classés par centre d'intérêt, et comment s'en servir",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/bestrepo/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/bestrepo/",
+    "githubUrl": "https://github.com/Mrthomaslef/bestrepo",
+    "pushedAt": "2026-11-23T15:32:04Z"
+  },
+  {
+    "id": "respire",
+    "title": "Respire",
+    "subtitle": "App personnelle chiffrée (accès privé)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/respire/apple-touch-icon.png",
+    "prodUrl": "https://mrthomaslef.github.io/respire/",
+    "githubUrl": "https://github.com/Mrthomaslef/respire",
+    "pushedAt": "2026-11-23T06:31:14Z"
   },
   {
     "id": "ayn-thor",
@@ -33,17 +77,6 @@
     "pushedAt": "2026-11-23T02:01:04Z"
   },
   {
-    "id": "recherche-d-appartement",
-    "title": "Appart côté Bois — Notre futur appart",
-    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, toutes les photos en galerie, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
-    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=4",
-    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
-    "pushedAt": "2026-11-22T19:37:34Z"
-  },
-  {
     "id": "agenda-famille",
     "title": "Agenda Famille — Marie & Thomas",
     "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
@@ -53,28 +86,6 @@
     "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
     "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
     "pushedAt": "2026-11-22T10:02:02Z"
-  },
-  {
-    "id": "bestrepo",
-    "title": "Bestrepo",
-    "subtitle": "Les dépôts GitHub les plus étoilés, classés par centre d'intérêt, et comment s'en servir",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/bestrepo/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/bestrepo/",
-    "githubUrl": "https://github.com/Mrthomaslef/bestrepo",
-    "pushedAt": "2026-11-21T15:26:39Z"
-  },
-  {
-    "id": "achats-recurrents",
-    "title": "Achats récurrents Amazon",
-    "subtitle": "Lait, couches, Kérastase… commandés automatiquement — décoche pour annuler",
-    "category": "famille-quotidien",
-    "emoji": "🛒",
-    "logoUrl": "https://mrthomaslef.github.io/achats-recurrents/assets/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/achats-recurrents/",
-    "githubUrl": "https://github.com/Mrthomaslef/achats-recurrents",
-    "pushedAt": "2026-11-21T14:32:56Z"
   },
   {
     "id": "assistante-maternelle",
@@ -152,17 +163,6 @@
     "prodUrl": "https://mrthomaslef.github.io/voyages-voyages/",
     "githubUrl": "https://github.com/Mrthomaslef/voyages-voyages",
     "pushedAt": "2026-11-16T07:16:32Z"
-  },
-  {
-    "id": "respire",
-    "title": "Respire",
-    "subtitle": "App personnelle chiffrée (accès privé)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/respire/apple-touch-icon.png",
-    "prodUrl": "https://mrthomaslef.github.io/respire/",
-    "githubUrl": "https://github.com/Mrthomaslef/respire",
-    "pushedAt": "2026-11-15T12:37:49Z"
   },
   {
     "id": "quiz-trentenaires",
