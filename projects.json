@@ -8,7 +8,7 @@
     "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
     "githubUrl": "https://github.com/Mrthomaslef/allinone/tree/main/film-et-serie",
-    "pushedAt": "2026-11-25T02:01:03Z"
+    "pushedAt": "2026-11-25T22:16:35Z"
   },
   {
     "id": "babyphone",
@@ -19,7 +19,29 @@
     "logoUrl": "https://mrthomaslef.github.io/mapp-store/assets/babyphone-icon.svg?v=1",
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/babyphone/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor/tree/main/babyphone",
-    "pushedAt": "2026-11-25T02:01:03Z"
+    "pushedAt": "2026-11-25T22:16:35Z"
+  },
+  {
+    "id": "agenda-famille",
+    "title": "Agenda Famille — Marie & Thomas",
+    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
+    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
+    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
+    "pushedAt": "2026-11-25T22:16:35Z"
+  },
+  {
+    "id": "recherche-d-appartement",
+    "title": "Appart côté Bois — Notre futur appart",
+    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, toutes les photos en galerie, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
+    "category": "famille-quotidien",
+    "emoji": "🏡",
+    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
+    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=4",
+    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
+    "pushedAt": "2026-11-25T20:25:28Z"
   },
   {
     "id": "ayn-thor",
@@ -31,17 +53,6 @@
     "prodUrl": "https://mrthomaslef.github.io/ayn-thor/",
     "githubUrl": "https://github.com/Mrthomaslef/ayn-thor",
     "pushedAt": "2026-11-25T02:01:03Z"
-  },
-  {
-    "id": "recherche-d-appartement",
-    "title": "Appart côté Bois — Notre futur appart",
-    "subtitle": "Toutes les annonces 12e côté bois, Saint-Mandé, Vincennes côté château & Charenton, mises à jour 2×/jour · Carte datée, toutes les photos en galerie, favoris & candidature en 1 bouton (profil Marie ou Thomas)",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/recherche-d-appartement/assets/icon.svg?v=1",
-    "prodUrl": "https://mrthomaslef.github.io/recherche-d-appartement/?v=4",
-    "githubUrl": "https://github.com/Mrthomaslef/recherche-d-appartement",
-    "pushedAt": "2026-11-24T21:03:05Z"
   },
   {
     "id": "achats-recurrents",
@@ -75,17 +86,6 @@
     "prodUrl": "https://mrthomaslef.github.io/respire/",
     "githubUrl": "https://github.com/Mrthomaslef/respire",
     "pushedAt": "2026-11-24T18:26:57Z"
-  },
-  {
-    "id": "agenda-famille",
-    "title": "Agenda Famille — Marie & Thomas",
-    "subtitle": "Planning partagé, gardes, relais Émile & indisponibilités à la maison",
-    "category": "famille-quotidien",
-    "emoji": "🏡",
-    "logoUrl": "https://mrthomaslef.github.io/agenda-famille/icon.svg",
-    "prodUrl": "https://mrthomaslef.github.io/agenda-famille/",
-    "githubUrl": "https://github.com/Mrthomaslef/agenda-famille",
-    "pushedAt": "2026-11-24T05:37:18Z"
   },
   {
     "id": "bestrepo",
