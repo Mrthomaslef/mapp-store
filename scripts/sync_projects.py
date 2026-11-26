@@ -86,6 +86,14 @@ KNOWN_METADATA = {
         "prodUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/",
         "logoUrl": "https://mrthomaslef.github.io/allinone/film-et-serie/assets/icon.svg?v=2",
     },
+    "microbio": {
+        "title": "Microbio — Infectio pédiatrique",
+        "subtitle": "Aide-mémoire hors-ligne de Marie · antibiothérapie probabiliste de l'enfant, fiches bactéries & résistances naturelles, lecture de l'antibiogramme, prélèvements, calculateur de doses mg/kg & DFG Schwartz",
+        "category": "pediatrie-clinique",
+        "emoji": "🧫",
+        "prodUrl": "https://mrthomaslef.github.io/microbio/",
+        "logoUrl": "assets/microbio-icon.svg?v=1",
+    },
     "biblio-marie": {
         "title": "BiblioMarie — Infectiologie pédiatrique",
         "subtitle": "Le Carnet de Marie — veille bibliographique pédiatrie & infectiologie, résumés en français",
